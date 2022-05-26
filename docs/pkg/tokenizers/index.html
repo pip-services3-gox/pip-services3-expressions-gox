@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>tokenizers - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.18.2";</script>
+<script src="../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package tokenizers
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "tokenizers"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#AbstractTokenizer">type AbstractTokenizer</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#InheritAbstractTokenizer">func InheritAbstractTokenizer(overrides ITokenizerOverrides) *AbstractTokenizer</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.ClearCharacterStates">func (c *AbstractTokenizer) ClearCharacterStates()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.CommentState">func (c *AbstractTokenizer) CommentState() ICommentState</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.DecodeStrings">func (c *AbstractTokenizer) DecodeStrings() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.GetCharacterState">func (c *AbstractTokenizer) GetCharacterState(symbol rune) ITokenizerState</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.HasNextToken">func (c *AbstractTokenizer) HasNextToken() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.MergeWhitespaces">func (c *AbstractTokenizer) MergeWhitespaces() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.NextToken">func (c *AbstractTokenizer) NextToken() *Token</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.NumberState">func (c *AbstractTokenizer) NumberState() INumberState</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.QuoteState">func (c *AbstractTokenizer) QuoteState() IQuoteState</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.ReadNextToken">func (c *AbstractTokenizer) ReadNextToken() *Token</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.Reader">func (c *AbstractTokenizer) Reader() io.IScanner</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.SetCharacterState">func (c *AbstractTokenizer) SetCharacterState(fromSymbol rune, toSymbol rune, state ITokenizerState)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.SetCommentState">func (c *AbstractTokenizer) SetCommentState(value ICommentState)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.SetDecodeStrings">func (c *AbstractTokenizer) SetDecodeStrings(value bool)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.SetMergeWhitespaces">func (c *AbstractTokenizer) SetMergeWhitespaces(value bool)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.SetNumberState">func (c *AbstractTokenizer) SetNumberState(value INumberState)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.SetQuoteState">func (c *AbstractTokenizer) SetQuoteState(value IQuoteState)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.SetReader">func (c *AbstractTokenizer) SetReader(value io.IScanner)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.SetSkipComments">func (c *AbstractTokenizer) SetSkipComments(value bool)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.SetSkipEof">func (c *AbstractTokenizer) SetSkipEof(value bool)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.SetSkipUnknown">func (c *AbstractTokenizer) SetSkipUnknown(value bool)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.SetSkipWhitespaces">func (c *AbstractTokenizer) SetSkipWhitespaces(value bool)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.SetSymbolState">func (c *AbstractTokenizer) SetSymbolState(value ISymbolState)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.SetUnifyNumbers">func (c *AbstractTokenizer) SetUnifyNumbers(value bool)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.SetWhitespaceState">func (c *AbstractTokenizer) SetWhitespaceState(value IWhitespaceState)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.SetWordState">func (c *AbstractTokenizer) SetWordState(value IWordState)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.SkipComments">func (c *AbstractTokenizer) SkipComments() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.SkipEof">func (c *AbstractTokenizer) SkipEof() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.SkipUnknown">func (c *AbstractTokenizer) SkipUnknown() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.SkipWhitespaces">func (c *AbstractTokenizer) SkipWhitespaces() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.SymbolState">func (c *AbstractTokenizer) SymbolState() ISymbolState</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.TokenizeBuffer">func (c *AbstractTokenizer) TokenizeBuffer(buffer string) []*Token</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.TokenizeBufferToStrings">func (c *AbstractTokenizer) TokenizeBufferToStrings(buffer string) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.TokenizeStream">func (c *AbstractTokenizer) TokenizeStream(scanner io.IScanner) []*Token</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.TokenizeStreamToStrings">func (c *AbstractTokenizer) TokenizeStreamToStrings(scanner io.IScanner) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.UnifyNumbers">func (c *AbstractTokenizer) UnifyNumbers() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.WhitespaceState">func (c *AbstractTokenizer) WhitespaceState() IWhitespaceState</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AbstractTokenizer.WordState">func (c *AbstractTokenizer) WordState() IWordState</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ICommentState">type ICommentState</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#INumberState">type INumberState</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#IQuoteState">type IQuoteState</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ISymbolState">type ISymbolState</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ITokenizer">type ITokenizer</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ITokenizerOverrides">type ITokenizerOverrides</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ITokenizerState">type ITokenizerState</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#IWhitespaceState">type IWhitespaceState</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#IWordState">type IWordState</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Token">type Token</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewToken">func NewToken(typ int, value string, line int, column int) *Token</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Token.Column">func (c *Token) Column() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Token.Equals">func (c *Token) Equals(obj *Token) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Token.Line">func (c *Token) Line() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Token.Type">func (c *Token) Type() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Token.Value">func (c *Token) Value() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go">AbstractTokenizer.go</a>
+			
+				<a href="http://localhost:6060/src/tokenizers/ICommentState.go">ICommentState.go</a>
+			
+				<a href="http://localhost:6060/src/tokenizers/INumberState.go">INumberState.go</a>
+			
+				<a href="http://localhost:6060/src/tokenizers/IQuoteState.go">IQuoteState.go</a>
+			
+				<a href="http://localhost:6060/src/tokenizers/ISymbolState.go">ISymbolState.go</a>
+			
+				<a href="http://localhost:6060/src/tokenizers/ITokenizer.go">ITokenizer.go</a>
+			
+				<a href="http://localhost:6060/src/tokenizers/ITokenizerState.go">ITokenizerState.go</a>
+			
+				<a href="http://localhost:6060/src/tokenizers/IWhiteSpaceState.go">IWhiteSpaceState.go</a>
+			
+				<a href="http://localhost:6060/src/tokenizers/IWordState.go">IWordState.go</a>
+			
+				<a href="http://localhost:6060/src/tokenizers/Token.go">Token.go</a>
+			
+				<a href="http://localhost:6060/src/tokenizers/TokenType.go">TokenType.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<p>
+Types (categories) of tokens such as &#34;number&#34;, &#34;symbol&#34; or &#34;word&#34;.
+</p>
+
+				<pre>const (
+    <span id="Unknown">Unknown</span> = <a href="http://localhost:6060/pkg/builtin/#iota">iota</a>
+    <span id="Eof">Eof</span>
+    <span id="Eol">Eol</span>
+    <span id="Float">Float</span>
+    <span id="Integer">Integer</span>
+    <span id="HexDecimal">HexDecimal</span>
+    <span id="Number">Number</span>
+    <span id="Symbol">Symbol</span>
+    <span id="Quoted">Quoted</span>
+    <span id="Word">Word</span>
+    <span id="Keyword">Keyword</span>
+    <span id="Whitespace">Whitespace</span>
+    <span id="Comment">Comment</span>
+    <span id="Special">Special</span>
+)</pre>
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="AbstractTokenizer">type <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=305:825#L3">AbstractTokenizer</a>
+				<a class="permalink" href="index.html#AbstractTokenizer">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+AbstractTokenizer implements an abstract tokenizer class.
+</p>
+
+			<pre>type AbstractTokenizer struct {
+<span id="AbstractTokenizer.Overrides"></span>    Overrides <a href="index.html#ITokenizerOverrides">ITokenizerOverrides</a>
+
+<span id="AbstractTokenizer.Scanner"></span>    Scanner        <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>
+<span id="AbstractTokenizer.NextTokenValue"></span>    NextTokenValue *<a href="index.html#Token">Token</a>
+<span id="AbstractTokenizer.LastTokenType"></span>    LastTokenType  <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="InheritAbstractTokenizer">func <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=827:906#L27">InheritAbstractTokenizer</a>
+					<a class="permalink" href="index.html#InheritAbstractTokenizer">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func InheritAbstractTokenizer(overrides <a href="index.html#ITokenizerOverrides">ITokenizerOverrides</a>) *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="AbstractTokenizer.ClearCharacterStates">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=3538:3588#L149">ClearCharacterStates</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.ClearCharacterStates">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) ClearCharacterStates()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.CommentState">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=2190:2246#L92">CommentState</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.CommentState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) CommentState() <a href="index.html#ICommentState">ICommentState</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.DecodeStrings">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=2025:2073#L84">DecodeStrings</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.DecodeStrings">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) DecodeStrings() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.GetCharacterState">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=3240:3314#L140">GetCharacterState</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.GetCharacterState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) GetCharacterState(symbol <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>) <a href="index.html#ITokenizerState">ITokenizerState</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.HasNextToken">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=3812:3859#L163">HasNextToken</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.HasNextToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) HasNextToken() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.MergeWhitespaces">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=1687:1738#L68">MergeWhitespaces</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.MergeWhitespaces">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) MergeWhitespaces() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.NextToken">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=3979:4025#L170">NextToken</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.NextToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) NextToken() *<a href="index.html#Token">Token</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.NumberState">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=2369:2423#L100">NumberState</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.NumberState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) NumberState() <a href="index.html#INumberState">INumberState</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.QuoteState">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=2542:2594#L108">QuoteState</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.QuoteState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) QuoteState() <a href="index.html#IQuoteState">IQuoteState</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.ReadNextToken">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=4156:4206#L179">ReadNextToken</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.ReadNextToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) ReadNextToken() *<a href="index.html#Token">Token</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.Reader">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=3608:3656#L153">Reader</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.Reader">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) Reader() <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.SetCharacterState">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=3385:3485#L145">SetCharacterState</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.SetCharacterState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) SetCharacterState(fromSymbol <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>, toSymbol <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>, state <a href="index.html#ITokenizerState">ITokenizerState</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.SetCommentState">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=2275:2339#L96">SetCommentState</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.SetCommentState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) SetCommentState(value <a href="index.html#ICommentState">ICommentState</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.SetDecodeStrings">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=2103:2159#L88">SetDecodeStrings</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.SetDecodeStrings">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) SetDecodeStrings(value <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.SetMergeWhitespaces">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=1771:1830#L72">SetMergeWhitespaces</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.SetMergeWhitespaces">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) SetMergeWhitespaces(value <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.SetNumberState">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=2451:2513#L104">SetNumberState</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.SetNumberState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) SetNumberState(value <a href="index.html#INumberState">INumberState</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.SetQuoteState">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=2621:2681#L112">SetQuoteState</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.SetQuoteState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) SetQuoteState(value <a href="index.html#IQuoteState">IQuoteState</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.SetReader">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=3680:3736#L157">SetReader</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.SetReader">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) SetReader(value <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.SetSkipComments">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=1461:1516#L56">SetSkipComments</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.SetSkipComments">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) SetSkipComments(value <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.SetSkipEof">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=1612:1662#L64">SetSkipEof</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.SetSkipEof">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) SetSkipEof(value <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.SetSkipUnknown">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=1129:1183#L40">SetSkipUnknown</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.SetSkipUnknown">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) SetSkipUnknown(value <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.SetSkipWhitespaces">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=1294:1352#L48">SetSkipWhitespaces</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.SetSkipWhitespaces">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) SetSkipWhitespaces(value <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.SetSymbolState">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=2791:2853#L120">SetSymbolState</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.SetSymbolState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) SetSymbolState(value <a href="index.html#ISymbolState">ISymbolState</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.SetUnifyNumbers">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=1940:1995#L80">SetUnifyNumbers</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.SetUnifyNumbers">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) SetUnifyNumbers(value <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.SetWhitespaceState">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=2976:3046#L128">SetWhitespaceState</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.SetWhitespaceState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) SetWhitespaceState(value <a href="index.html#IWhitespaceState">IWhitespaceState</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.SetWordState">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=3155:3213#L136">SetWordState</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.SetWordState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) SetWordState(value <a href="index.html#IWordState">IWordState</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.SkipComments">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=1385:1432#L52">SkipComments</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.SkipComments">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) SkipComments() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.SkipEof">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=1546:1588#L60">SkipEof</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.SkipEof">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) SkipEof() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.SkipUnknown">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=1055:1101#L36">SkipUnknown</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.SkipUnknown">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) SkipUnknown() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.SkipWhitespaces">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=1212:1262#L44">SkipWhitespaces</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.SkipWhitespaces">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) SkipWhitespaces() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.SymbolState">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=2709:2763#L116">SymbolState</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.SymbolState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) SymbolState() <a href="index.html#ISymbolState">ISymbolState</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.TokenizeBuffer">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=6383:6449#L274">TokenizeBuffer</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.TokenizeBuffer">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) TokenizeBuffer(buffer <a href="http://localhost:6060/pkg/builtin/#string">string</a>) []*<a href="index.html#Token">Token</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.TokenizeBufferToStrings">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=6805:6880#L292">TokenizeBufferToStrings</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.TokenizeBufferToStrings">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) TokenizeBufferToStrings(buffer <a href="http://localhost:6060/pkg/builtin/#string">string</a>) []<a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.TokenizeStream">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=6128:6200#L261">TokenizeStream</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.TokenizeStream">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) TokenizeStream(scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>) []*<a href="index.html#Token">Token</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.TokenizeStreamToStrings">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=6529:6610#L279">TokenizeStreamToStrings</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.TokenizeStreamToStrings">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) TokenizeStreamToStrings(scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>) []<a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.UnifyNumbers">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=1864:1911#L76">UnifyNumbers</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.UnifyNumbers">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) UnifyNumbers() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.WhitespaceState">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=2882:2944#L124">WhitespaceState</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.WhitespaceState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) WhitespaceState() <a href="index.html#IWhitespaceState">IWhitespaceState</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractTokenizer.WordState">func (*AbstractTokenizer) <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=3079:3129#L132">WordState</a>
+					<a class="permalink" href="index.html#AbstractTokenizer.WordState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AbstractTokenizer">AbstractTokenizer</a>) WordState() <a href="index.html#IWordState">IWordState</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ICommentState">type <a href="http://localhost:6060/src/tokenizers/ICommentState.go?s=103:152#L1">ICommentState</a>
+				<a class="permalink" href="index.html#ICommentState">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+ICommentState defines an interface for tokenizer state that processes comments.
+</p>
+
+			<pre>type ICommentState interface {
+    <a href="index.html#ITokenizerState">ITokenizerState</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="INumberState">type <a href="http://localhost:6060/src/tokenizers/INumberState.go?s=126:174#L1">INumberState</a>
+				<a class="permalink" href="index.html#INumberState">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+INumberState defines interface for tokenizer state that processes numbers - Integers, Floats, HexDec..
+</p>
+
+			<pre>type INumberState interface {
+    <a href="index.html#ITokenizerState">ITokenizerState</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IQuoteState">type <a href="http://localhost:6060/src/tokenizers/IQuoteState.go?s=107:620#L1">IQuoteState</a>
+				<a class="permalink" href="index.html#IQuoteState">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+IQuoteState defines an interface for tokenizer state that processes quoted strings.
+</p>
+
+			<pre>type IQuoteState interface {
+    <a href="index.html#ITokenizerState">ITokenizerState</a>
+
+    <span class="comment">// EncodeString encodes a string value.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- value: A string value to be encoded.</span>
+    <span class="comment">//		- quoteSymbol: A string quote character.</span>
+    <span class="comment">//	Returns: An encoded string.</span>
+    EncodeString(value <a href="http://localhost:6060/pkg/builtin/#string">string</a>, quoteSymbol <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>) <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+
+    <span class="comment">// DecodeString decodes a string value.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- value: A string value to be decoded.</span>
+    <span class="comment">//		- quoteSymbol: A string quote character.</span>
+    <span class="comment">//	Returns: An decoded string.</span>
+    DecodeString(value <a href="http://localhost:6060/pkg/builtin/#string">string</a>, quoteSymbol <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>) <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ISymbolState">type <a href="http://localhost:6060/src/tokenizers/ISymbolState.go?s=104:284#L1">ISymbolState</a>
+				<a class="permalink" href="index.html#ISymbolState">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+ISymbolState defines an interface for tokenizer state that processes delimiters.
+</p>
+
+			<pre>type ISymbolState interface {
+    <a href="index.html#ITokenizerState">ITokenizerState</a>
+
+    <span class="comment">// Add a multi-character symbol.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- value: The symbol to add, such as &#34;=:=&#34;</span>
+    Add(value <a href="http://localhost:6060/pkg/builtin/#string">string</a>, tokenType <a href="http://localhost:6060/pkg/builtin/#int">int</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ITokenizer">type <a href="http://localhost:6060/src/tokenizers/ITokenizer.go?s=1832:5020#L29">ITokenizer</a>
+				<a class="permalink" href="index.html#ITokenizer">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+ITokenizer a tokenizer divides a string into tokens. This class is highly customizable with regard
+to exactly how this division occurs, but it also has defaults that are suitable for many
+languages. This class assumes that the character values read from the string lie in
+the range 0-255. For example, the Unicode value of a capital A is 65,
+so &lt;code&gt; System.out.println((char)65); &lt;/code&gt; prints out a capital A.
+&lt;p&gt;
+The behavior of a tokenizer depends on its character state table. This table is an array
+of 256 &lt;code&gt;TokenizerState&lt;/code&gt; states. The state table decides which state to enter
+upon reading a character from the input string.
+&lt;p&gt;
+For example, by default, upon reading an &#39;A&#39;, a tokenizer will enter a &#34;word&#34; state.
+This means the tokenizer will ask a &lt;code&gt;WordState&lt;/code&gt; object to consume the &#39;A&#39;,
+along with the characters after the &#39;A&#39; that form a word. The state&#39;s responsibility
+is to consume characters and return a complete token.
+&lt;p&gt;
+The default table sets a SymbolState for every character from 0 to 255,
+and then overrides this with:&lt;blockquote&gt;&lt;pre&gt;
+From    To     State
+0     &#39; &#39;    whitespaceState
+&#39;a&#39;    &#39;z&#39;    wordState
+&#39;A&#39;    &#39;Z&#39;    wordState
+160     255    wordState
+&#39;0&#39;    &#39;9&#39;    numberState
+&#39;-&#39;    &#39;-&#39;    numberState
+&#39;.&#39;    &#39;.&#39;    numberState
+&#39;&#34;&#39;    &#39;&#34;&#39;    quoteState
+&#39;\&rdquo;   &#39;\&rdquo;    quoteState
+&#39;/&#39;    &#39;/&#39;    slashState
+&lt;/pre&gt;&lt;/blockquote&gt;
+In addition to allowing modification of the state table, this class makes each of the states
+above available. Some of these states are customizable. For example, wordState allows customization
+of what characters can be part of a word, after the first character.
+</p>
+
+			<pre>type ITokenizer interface {
+    <span class="comment">// SkipUnknown gets skip unknown characters flag.</span>
+    SkipUnknown() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>
+
+    <span class="comment">// SetSkipUnknown sets skip unknown characters flag.</span>
+    SetSkipUnknown(value <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>)
+
+    <span class="comment">// SkipWhitespaces gets skip whitespaces flag.</span>
+    SkipWhitespaces() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>
+
+    <span class="comment">// SetSkipWhitespaces sets skip whitespaces flag.</span>
+    SetSkipWhitespaces(value <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>)
+
+    <span class="comment">// SkipComments gets skip comments flag.</span>
+    SkipComments() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>
+
+    <span class="comment">// SetSkipComments sets skip comments flag.</span>
+    SetSkipComments(value <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>)
+
+    <span class="comment">// SkipEof gets skip End-Of-File token at the end of stream flag.</span>
+    SkipEof() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>
+
+    <span class="comment">// SetSkipEof sets skip End-Of-File token at the end of stream flag.</span>
+    SetSkipEof(value <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>)
+
+    <span class="comment">// MergeWhitespaces gets merges whitespaces flag.</span>
+    MergeWhitespaces() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>
+
+    <span class="comment">// SetMergeWhitespaces sets merges whitespaces flag.</span>
+    SetMergeWhitespaces(value <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>)
+
+    <span class="comment">// UnifyNumbers gets unifies numbers: &#34;Integers&#34; and &#34;Floats&#34; makes just &#34;Numbers&#34; flag</span>
+    UnifyNumbers() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>
+
+    <span class="comment">// SetUnifyNumbers sets unifies numbers: &#34;Integers&#34; and &#34;Floats&#34; makes just &#34;Numbers&#34; flag</span>
+    SetUnifyNumbers(value <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>)
+
+    <span class="comment">// DecodeStrings gets decodes quoted strings flag.</span>
+    DecodeStrings() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>
+
+    <span class="comment">// SetDecodeStrings sets decodes quoted strings flag.</span>
+    SetDecodeStrings(value <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>)
+
+    <span class="comment">// CommentState gets a token state to process comments.</span>
+    CommentState() <a href="index.html#ICommentState">ICommentState</a>
+
+    <span class="comment">// NumberState gets a token state to process numbers.</span>
+    NumberState() <a href="index.html#INumberState">INumberState</a>
+
+    <span class="comment">// QuoteState gets a token state to process quoted strings.</span>
+    QuoteState() <a href="index.html#IQuoteState">IQuoteState</a>
+
+    <span class="comment">// SymbolState gets a token state to process symbols (single like &#34;=&#34; or muti-character like &#34;&lt;&gt;&#34;)</span>
+    SymbolState() <a href="index.html#ISymbolState">ISymbolState</a>
+
+    <span class="comment">// WhitespaceState gets a token state to process white space delimiters.</span>
+    WhitespaceState() <a href="index.html#IWhitespaceState">IWhitespaceState</a>
+
+    <span class="comment">// WordState gets a token state to process words or indentificators.</span>
+    WordState() <a href="index.html#IWordState">IWordState</a>
+
+    <span class="comment">// Reader gets the stream scanner to tokenize.</span>
+    Reader() <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>
+
+    <span class="comment">// SetReader sets the stream scanner to tokenize.</span>
+    SetReader(scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>)
+
+    <span class="comment">// HasNextToken checks if there is the next token exist.</span>
+    <span class="comment">//	Returns: &lt;code&gt;true&lt;/code&gt; if scanner has the next token.</span>
+    HasNextToken() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>
+
+    <span class="comment">// NextToken gets the next token from the scanner.</span>
+    <span class="comment">//	Returns: Next token of &lt;code&gt;null&lt;/code&gt; if there are no more tokens left.</span>
+    NextToken() *<a href="index.html#Token">Token</a>
+
+    <span class="comment">// TokenizeStream tokenizes a textual stream into a list of token structures.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- scanner: A textual stream to be tokenized.</span>
+    <span class="comment">//	Returns: A list of token structures.</span>
+    TokenizeStream(scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>) []*<a href="index.html#Token">Token</a>
+
+    <span class="comment">// TokenizeBuffer tokenizes a string buffer into a list of tokens structures.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- buffer: A string buffer to be tokenized.</span>
+    <span class="comment">//	Returns: A list of token structures.</span>
+    TokenizeBuffer(buffer <a href="http://localhost:6060/pkg/builtin/#string">string</a>) []*<a href="index.html#Token">Token</a>
+
+    <span class="comment">// TokenizeStreamToStrings tokenizes a textual stream into a list of strings.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- scanner: A textual stream to be tokenized.</span>
+    <span class="comment">//	Returns: A list of token strings.</span>
+    TokenizeStreamToStrings(scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>) []<a href="http://localhost:6060/pkg/builtin/#string">string</a>
+
+    <span class="comment">// TokenizeBufferToStrings tokenizes a string buffer into a list of strings.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- buffer: A string buffer to be tokenized.</span>
+    <span class="comment">//	Returns: A list of token strings.</span>
+    TokenizeBufferToStrings(buffer <a href="http://localhost:6060/pkg/builtin/#string">string</a>) []<a href="http://localhost:6060/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ITokenizerOverrides">type <a href="http://localhost:6060/src/tokenizers/AbstractTokenizer.go?s=180:242#L1">ITokenizerOverrides</a>
+				<a class="permalink" href="index.html#ITokenizerOverrides">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type ITokenizerOverrides interface {
+    ReadNextToken() *<a href="index.html#Token">Token</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ITokenizerState">type <a href="http://localhost:6060/src/tokenizers/ITokenizerState.go?s=720:1099#L4">ITokenizerState</a>
+				<a class="permalink" href="index.html#ITokenizerState">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+ITokenizerState a tokenizerState returns a token, given a scanner, an initial character read from the scanner,
+and a tokenizer that is conducting an overall tokenization of the scanner. The tokenizer will
+typically have a character state table that decides which state to use, depending on an initial
+character. If a single character is insufficient, a state such as &lt;code&gt;SlashState&lt;/code&gt;
+will read a second character, and may delegate to another state, such as &lt;code&gt;SlashStarState&lt;/code&gt;.
+This prospect of delegation is the reason that the &lt;code&gt;nextToken()&lt;/code&gt;
+method has a tokenizer argument.
+</p>
+
+			<pre>type ITokenizerState interface {
+    <span class="comment">// NextToken gets the next token from the stream started from the character linked to this state.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- scanner: A textual string to be tokenized.</span>
+    <span class="comment">//		- tokenizer: A tokenizer class that controls the process.</span>
+    <span class="comment">//	Returns: The next token from the top of the stream.</span>
+    NextToken(scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>, tokenizer <a href="index.html#ITokenizer">ITokenizer</a>) *<a href="index.html#Token">Token</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IWhitespaceState">type <a href="http://localhost:6060/src/tokenizers/IWhiteSpaceState.go?s=120:633#L1">IWhitespaceState</a>
+				<a class="permalink" href="index.html#IWhitespaceState">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+IWhitespaceState defines an interface for tokenizer state that processes whitespaces (&#39; &#39;, &#39;\t&#39;)
+</p>
+
+			<pre>type IWhitespaceState interface {
+    <a href="index.html#ITokenizerState">ITokenizerState</a>
+
+    <span class="comment">// SetWhitespaceChars establish the given characters as whitespace to ignore.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- fromSymbol: First character index of the interval.</span>
+    <span class="comment">//		- toSymbol: Last character index of the interval.</span>
+    <span class="comment">//		- enable: &lt;code&gt;true&lt;/code&gt; if this state should ignore characters in the given range.</span>
+    SetWhitespaceChars(fromSymbol <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>, toSymbol <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>, enable <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>)
+
+    <span class="comment">// ClearWhitespaceChars clears definitions of whitespace characters.</span>
+    ClearWhitespaceChars()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IWordState">type <a href="http://localhost:6060/src/tokenizers/IWordState.go?s=124:755#L1">IWordState</a>
+				<a class="permalink" href="index.html#IWordState">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+IWordState defines an interface for tokenizer state that processes words, identificators or keywords
+</p>
+
+			<pre>type IWordState interface {
+    <a href="index.html#ITokenizerState">ITokenizerState</a>
+
+    <span class="comment">// SetWordChars establish characters in the given range as valid characters for part of a word after</span>
+    <span class="comment">// the first character. Note that the tokenizer must determine which characters are valid</span>
+    <span class="comment">// as the beginning character of a word.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- fromSymbol: First character index of the interval.</span>
+    <span class="comment">//		- toSymbol: Last character index of the interval.</span>
+    <span class="comment">//		- enable: &lt;code&gt;true&lt;/code&gt; if this state should use characters in the given range.</span>
+    SetWordChars(fromSymbol <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>, toSymbol <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>, enable <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>)
+
+    <span class="comment">// ClearWordChars clears definitions of word chars.</span>
+    ClearWordChars()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Token">type <a href="http://localhost:6060/src/tokenizers/Token.go?s=353:425#L1">Token</a>
+				<a class="permalink" href="index.html#Token">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+Token a token represents a logical chunk of a string. For example, a typical tokenizer would break
+the string &#34;1.23 &amp;lt;= 12.3&#34; into three tokens: the number 1.23, a less-than-or-equal symbol,
+and the number 12.3. A token is a receptacle, and relies on a tokenizer to decide precisely how
+to divide a string into tokens.
+</p>
+
+			<pre>type Token struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewToken">func <a href="http://localhost:6060/src/tokenizers/Token.go?s=695:760#L11">NewToken</a>
+					<a class="permalink" href="index.html#NewToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewToken(typ <a href="http://localhost:6060/pkg/builtin/#int">int</a>, value <a href="http://localhost:6060/pkg/builtin/#string">string</a>, line <a href="http://localhost:6060/pkg/builtin/#int">int</a>, column <a href="http://localhost:6060/pkg/builtin/#int">int</a>) *<a href="index.html#Token">Token</a></pre>
+				<p>
+NewToken constructs this token with type and value.
+</p>
+<pre>Parameters:
+	- typ: The type of this token.
+	- value: The token string value.
+	- line: The line number where the token is.
+	- column: The column number where the token is.
+Returns: Created token
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Token.Column">func (*Token) <a href="http://localhost:6060/src/tokenizers/Token.go?s=1130:1158#L36">Column</a>
+					<a class="permalink" href="index.html#Token.Column">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#Token">Token</a>) Column() <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+Column the column number where the token is.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Token.Equals">func (*Token) <a href="http://localhost:6060/src/tokenizers/Token.go?s=1181:1220#L40">Equals</a>
+					<a class="permalink" href="index.html#Token.Equals">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#Token">Token</a>) Equals(obj *<a href="index.html#Token">Token</a>) <a href="http://localhost:6060/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Token.Line">func (*Token) <a href="http://localhost:6060/src/tokenizers/Token.go?s=1035:1061#L31">Line</a>
+					<a class="permalink" href="index.html#Token.Line">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#Token">Token</a>) Line() <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+Line the line number where the token is.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Token.Type">func (*Token) <a href="http://localhost:6060/src/tokenizers/Token.go?s=871:897#L21">Type</a>
+					<a class="permalink" href="index.html#Token.Type">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#Token">Token</a>) Type() <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+Type token type.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Token.Value">func (*Token) <a href="http://localhost:6060/src/tokenizers/Token.go?s=939:969#L26">Value</a>
+					<a class="permalink" href="index.html#Token.Value">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#Token">Token</a>) Value() <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+				<p>
+Value token value.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="generic/index.html">generic</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						
+					</td>
+				</tr>
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="utilities/index.html">utilities</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						
+					</td>
+				</tr>
+			
+		</table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.18.2.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

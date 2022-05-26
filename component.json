@@ -1,0 +1,6 @@
+{
+  "name": "pip-services3-expressions-gox",
+  "registry": "github.com/pip-services3-gox",
+  "version": "1.0.0",
+  "build": 0
+}

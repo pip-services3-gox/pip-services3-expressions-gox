@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>parsers - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.18.2";</script>
+<script src="../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package parsers
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "mustache/parsers"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#MustacheParser">type MustacheParser</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewMustacheParser">func NewMustacheParser() *MustacheParser</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MustacheParser.Clear">func (c *MustacheParser) Clear()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MustacheParser.InitialTokens">func (c *MustacheParser) InitialTokens() []*MustacheToken</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MustacheParser.OriginalTokens">func (c *MustacheParser) OriginalTokens() []*tokenizers.Token</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MustacheParser.ParseString">func (c *MustacheParser) ParseString(mustache string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MustacheParser.ParseTokens">func (c *MustacheParser) ParseTokens(tokens []*tokenizers.Token) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MustacheParser.ResultTokens">func (c *MustacheParser) ResultTokens() []*MustacheToken</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MustacheParser.SetOriginalTokens">func (c *MustacheParser) SetOriginalTokens(value []*tokenizers.Token) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MustacheParser.SetTemplate">func (c *MustacheParser) SetTemplate(value string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MustacheParser.Template">func (c *MustacheParser) Template() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MustacheParser.VariableNames">func (c *MustacheParser) VariableNames() []string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#MustacheToken">type MustacheToken</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewMustacheToken">func NewMustacheToken(typ int, value string, line int, column int) *MustacheToken</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MustacheToken.Column">func (c *MustacheToken) Column() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MustacheToken.Line">func (c *MustacheToken) Line() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MustacheToken.SetTokens">func (c *MustacheToken) SetTokens(tokens []*MustacheToken)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MustacheToken.Tokens">func (c *MustacheToken) Tokens() []*MustacheToken</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MustacheToken.Type">func (c *MustacheToken) Type() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MustacheToken.Value">func (c *MustacheToken) Value() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/mustache/parsers/MustacheErrorCode.go">MustacheErrorCode.go</a>
+			
+				<a href="http://localhost:6060/src/mustache/parsers/MustacheParser.go">MustacheParser.go</a>
+			
+				<a href="http://localhost:6060/src/mustache/parsers/MustacheToken.go">MustacheToken.go</a>
+			
+				<a href="http://localhost:6060/src/mustache/parsers/MustacheTokenType.go">MustacheTokenType.go</a>
+			
+				<a href="http://localhost:6060/src/mustache/parsers/MustageLexicalState.go">MustageLexicalState.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<p>
+General syntax errors
+</p>
+
+				<pre>const (
+    <span class="comment">// ErrCodeUnknown the unknown</span>
+    <span id="ErrCodeUnknown">ErrCodeUnknown</span> = &#34;UNKNOWN&#34;
+
+    <span class="comment">// ErrCodeInternal the internal error</span>
+    <span id="ErrCodeInternal">ErrCodeInternal</span> = &#34;INTERNAL&#34;
+
+    <span class="comment">// ErrCodeUnexpectedEnd the unexpected end.</span>
+    <span id="ErrCodeUnexpectedEnd">ErrCodeUnexpectedEnd</span> = &#34;UNEXPECTED_END&#34;
+
+    <span class="comment">// ErrCodeErrorNear the error near</span>
+    <span id="ErrCodeErrorNear">ErrCodeErrorNear</span> = &#34;ERROR_NEAR&#34;
+
+    <span class="comment">// ErrCodeErrorAt the error at</span>
+    <span id="ErrCodeErrorAt">ErrCodeErrorAt</span> = &#34;ERROR_AT&#34;
+
+    <span class="comment">// ErrCodeUnexpectedSymbol the unexpected symbol</span>
+    <span id="ErrCodeUnexpectedSymbol">ErrCodeUnexpectedSymbol</span> = &#34;UNEXPECTED_SYMBOL&#34;
+
+    <span class="comment">// ErrCodeMismatchedBrackets the mismatched brackets</span>
+    <span id="ErrCodeMismatchedBrackets">ErrCodeMismatchedBrackets</span> = &#34;MISTMATCHED_BRACKETS&#34;
+
+    <span class="comment">// ErrCodeMissingVariable the missing variable</span>
+    <span id="ErrCodeMissingVariable">ErrCodeMissingVariable</span> = &#34;MISSING_VARIABLE&#34;
+
+    <span class="comment">// ErrCodeNotClosedSection not closed section</span>
+    <span id="ErrCodeNotClosedSection">ErrCodeNotClosedSection</span> = &#34;NOT_CLOSED_SECTION&#34;
+
+    <span class="comment">// ErrCodeUnexpectedSectionEnd unexpected section end</span>
+    <span id="ErrCodeUnexpectedSectionEnd">ErrCodeUnexpectedSectionEnd</span> = &#34;UNEXPECTED_SECTION_END&#34;
+)</pre>
+			
+				<p>
+Define types of mustache tokens
+</p>
+
+				<pre>const (
+    <span id="TokenUnknown">TokenUnknown</span> = <a href="http://localhost:6060/pkg/builtin/#iota">iota</a>
+    <span id="TokenValue">TokenValue</span>
+    <span id="TokenVariable">TokenVariable</span>
+    <span id="TokenEscapedVariable">TokenEscapedVariable</span>
+    <span id="TokenSection">TokenSection</span>
+    <span id="TokenInvertedSection">TokenInvertedSection</span>
+    <span id="TokenSectionEnd">TokenSectionEnd</span>
+    <span id="TokenPartial">TokenPartial</span>
+    <span id="TokenComment">TokenComment</span>
+)</pre>
+			
+				<p>
+Define states in mustache lexical analysis
+</p>
+
+				<pre>const (
+    <span id="StateValue">StateValue</span> = <a href="http://localhost:6060/pkg/builtin/#iota">iota</a>
+    <span id="StateOperator1">StateOperator1</span>
+    <span id="StateOperator2">StateOperator2</span>
+    <span id="StateVariable">StateVariable</span>
+    <span id="StateComment">StateComment</span>
+    <span id="StateClosure">StateClosure</span>
+)</pre>
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="MustacheParser">type <a href="http://localhost:6060/src/mustache/parsers/MustacheParser.go?s=357:616#L2">MustacheParser</a>
+				<a class="permalink" href="index.html#MustacheParser">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+MustacheParser implements an mustache parser class.
+</p>
+
+			<pre>type MustacheParser struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewMustacheParser">func <a href="http://localhost:6060/src/mustache/parsers/MustacheParser.go?s=618:658#L12">NewMustacheParser</a>
+					<a class="permalink" href="index.html#NewMustacheParser">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewMustacheParser() *<a href="index.html#MustacheParser">MustacheParser</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="MustacheParser.Clear">func (*MustacheParser) <a href="http://localhost:6060/src/mustache/parsers/MustacheParser.go?s=2274:2306#L73">Clear</a>
+					<a class="permalink" href="index.html#MustacheParser.Clear">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#MustacheParser">MustacheParser</a>) Clear()</pre>
+				<p>
+Clear parsing results.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MustacheParser.InitialTokens">func (*MustacheParser) <a href="http://localhost:6060/src/mustache/parsers/MustacheParser.go?s=1368:1425#L41">InitialTokens</a>
+					<a class="permalink" href="index.html#MustacheParser.InitialTokens">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#MustacheParser">MustacheParser</a>) InitialTokens() []*<a href="index.html#MustacheToken">MustacheToken</a></pre>
+				<p>
+InitialTokens gets the list of original mustache tokens.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MustacheParser.OriginalTokens">func (*MustacheParser) <a href="http://localhost:6060/src/mustache/parsers/MustacheParser.go?s=1052:1113#L31">OriginalTokens</a>
+					<a class="permalink" href="index.html#MustacheParser.OriginalTokens">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#MustacheParser">MustacheParser</a>) OriginalTokens() []*<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#Token">Token</a></pre>
+				<p>
+OriginalTokens gets the list of original tokens
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MustacheParser.ParseString">func (*MustacheParser) <a href="http://localhost:6060/src/mustache/parsers/MustacheParser.go?s=1865:1924#L58">ParseString</a>
+					<a class="permalink" href="index.html#MustacheParser.ParseString">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#MustacheParser">MustacheParser</a>) ParseString(mustache <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				<p>
+ParseString sets a new mustache string and parses it into internal byte code.
+</p>
+<pre>Parameters:
+	mustache: A new mustache string.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="MustacheParser.ParseTokens">func (*MustacheParser) <a href="http://localhost:6060/src/mustache/parsers/MustacheParser.go?s=2067:2137#L65">ParseTokens</a>
+					<a class="permalink" href="index.html#MustacheParser.ParseTokens">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#MustacheParser">MustacheParser</a>) ParseTokens(tokens []*<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#Token">Token</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="MustacheParser.ResultTokens">func (*MustacheParser) <a href="http://localhost:6060/src/mustache/parsers/MustacheParser.go?s=1512:1568#L46">ResultTokens</a>
+					<a class="permalink" href="index.html#MustacheParser.ResultTokens">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#MustacheParser">MustacheParser</a>) ResultTokens() []*<a href="index.html#MustacheToken">MustacheToken</a></pre>
+				<p>
+ResultTokens sets the list of parsed mustache tokens.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MustacheParser.SetOriginalTokens">func (*MustacheParser) <a href="http://localhost:6060/src/mustache/parsers/MustacheParser.go?s=1198:1273#L36">SetOriginalTokens</a>
+					<a class="permalink" href="index.html#MustacheParser.SetOriginalTokens">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#MustacheParser">MustacheParser</a>) SetOriginalTokens(value []*<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#Token">Token</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				<p>
+SetOriginalTokens sets the list of original tokens
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MustacheParser.SetTemplate">func (*MustacheParser) <a href="http://localhost:6060/src/mustache/parsers/MustacheParser.go?s=910:966#L26">SetTemplate</a>
+					<a class="permalink" href="index.html#MustacheParser.SetTemplate">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#MustacheParser">MustacheParser</a>) SetTemplate(value <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				<p>
+SetTemplate sets the mustache template.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MustacheParser.Template">func (*MustacheParser) <a href="http://localhost:6060/src/mustache/parsers/MustacheParser.go?s=800:842#L21">Template</a>
+					<a class="permalink" href="index.html#MustacheParser.Template">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#MustacheParser">MustacheParser</a>) Template() <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+				<p>
+Template gets the mustache template.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MustacheParser.VariableNames">func (*MustacheParser) <a href="http://localhost:6060/src/mustache/parsers/MustacheParser.go?s=1653:1702#L51">VariableNames</a>
+					<a class="permalink" href="index.html#MustacheParser.VariableNames">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#MustacheParser">MustacheParser</a>) VariableNames() []<a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+				<p>
+VariableNames gets the list of found variable names.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="MustacheToken">type <a href="http://localhost:6060/src/mustache/parsers/MustacheToken.go?s=68:173#L1">MustacheToken</a>
+				<a class="permalink" href="index.html#MustacheToken">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+MustacheToken defines an mustache token holder.
+</p>
+
+			<pre>type MustacheToken struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewMustacheToken">func <a href="http://localhost:6060/src/mustache/parsers/MustacheToken.go?s=423:504#L8">NewMustacheToken</a>
+					<a class="permalink" href="index.html#NewMustacheToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewMustacheToken(typ <a href="http://localhost:6060/pkg/builtin/#int">int</a>, value <a href="http://localhost:6060/pkg/builtin/#string">string</a>, line <a href="http://localhost:6060/pkg/builtin/#int">int</a>, column <a href="http://localhost:6060/pkg/builtin/#int">int</a>) *<a href="index.html#MustacheToken">MustacheToken</a></pre>
+				<p>
+NewMustacheToken creates an instance of a mustache token
+</p>
+<pre>Parameters:
+	- typ: The type of this token.
+	- value: The value of this token.
+	- line: The line number where the token is.
+	- column: The column number where the token is.
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="MustacheToken.Column">func (*MustacheToken) <a href="http://localhost:6060/src/mustache/parsers/MustacheToken.go?s=1216:1252#L44">Column</a>
+					<a class="permalink" href="index.html#MustacheToken.Column">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#MustacheToken">MustacheToken</a>) Column() <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+Column the column number where the token is.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MustacheToken.Line">func (*MustacheToken) <a href="http://localhost:6060/src/mustache/parsers/MustacheToken.go?s=1113:1147#L39">Line</a>
+					<a class="permalink" href="index.html#MustacheToken.Line">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#MustacheToken">MustacheToken</a>) Line() <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+Line the line number where the token is.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MustacheToken.SetTokens">func (*MustacheToken) <a href="http://localhost:6060/src/mustache/parsers/MustacheToken.go?s=986:1044#L34">SetTokens</a>
+					<a class="permalink" href="index.html#MustacheToken.SetTokens">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#MustacheToken">MustacheToken</a>) SetTokens(tokens []*<a href="index.html#MustacheToken">MustacheToken</a>)</pre>
+				<p>
+SetTokens sets a list of subtokens is this token a section.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MustacheToken.Tokens">func (*MustacheToken) <a href="http://localhost:6060/src/mustache/parsers/MustacheToken.go?s=851:900#L29">Tokens</a>
+					<a class="permalink" href="index.html#MustacheToken.Tokens">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#MustacheToken">MustacheToken</a>) Tokens() []*<a href="index.html#MustacheToken">MustacheToken</a></pre>
+				<p>
+Tokens gets a list of subtokens is this token a section.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MustacheToken.Type">func (*MustacheToken) <a href="http://localhost:6060/src/mustache/parsers/MustacheToken.go?s=643:677#L19">Type</a>
+					<a class="permalink" href="index.html#MustacheToken.Type">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#MustacheToken">MustacheToken</a>) Type() <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+Type the type of this token.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MustacheToken.Value">func (*MustacheToken) <a href="http://localhost:6060/src/mustache/parsers/MustacheToken.go?s=731:769#L24">Value</a>
+					<a class="permalink" href="index.html#MustacheToken.Value">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#MustacheToken">MustacheToken</a>) Value() <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+				<p>
+Value the value of this token.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.18.2.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

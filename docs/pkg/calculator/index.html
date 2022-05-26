@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>calculator - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.18.2";</script>
+<script src="../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package calculator
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "calculator"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#CalculationStack">type CalculationStack</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewCalculationStack">func NewCalculationStack() *CalculationStack</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CalculationStack.Clear">func (c *CalculationStack) Clear()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CalculationStack.Length">func (c *CalculationStack) Length() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CalculationStack.Peek">func (c *CalculationStack) Peek() *variants.Variant</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CalculationStack.PeekAt">func (c *CalculationStack) PeekAt(index int) *variants.Variant</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CalculationStack.Pop">func (c *CalculationStack) Pop() *variants.Variant</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CalculationStack.Push">func (c *CalculationStack) Push(value *variants.Variant)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ExpressionCalculator">type ExpressionCalculator</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionCalculatorFromExpression">func ExpressionCalculatorFromExpression(expression string) (*ExpressionCalculator, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionCalculatorFromTokens">func ExpressionCalculatorFromTokens(originalTokens []*tokenizers.Token) *ExpressionCalculator</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewExpressionCalculator">func NewExpressionCalculator() *ExpressionCalculator</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionCalculator.AutoVariables">func (c *ExpressionCalculator) AutoVariables() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionCalculator.Clear">func (c *ExpressionCalculator) Clear()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionCalculator.CreateVariables">func (c *ExpressionCalculator) CreateVariables(vars variables.IVariableCollection)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionCalculator.DefaultFunctions">func (c *ExpressionCalculator) DefaultFunctions() functions.IFunctionCollection</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionCalculator.DefaultVariables">func (c *ExpressionCalculator) DefaultVariables() variables.IVariableCollection</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionCalculator.Evaluate">func (c *ExpressionCalculator) Evaluate() (*variants.Variant, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionCalculator.EvaluateUsingVariables">func (c *ExpressionCalculator) EvaluateUsingVariables(vars variables.IVariableCollection) (*variants.Variant, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionCalculator.EvaluateUsingVariablesAndFunctions">func (c *ExpressionCalculator) EvaluateUsingVariablesAndFunctions(vars variables.IVariableCollection, funcs functions.IFunctionCollection) (*variants.Variant, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionCalculator.Expression">func (c *ExpressionCalculator) Expression() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionCalculator.InitialTokens">func (c *ExpressionCalculator) InitialTokens() []*parsers.ExpressionToken</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionCalculator.OriginalTokens">func (c *ExpressionCalculator) OriginalTokens() []*tokenizers.Token</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionCalculator.ResultTokens">func (c *ExpressionCalculator) ResultTokens() []*parsers.ExpressionToken</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionCalculator.SetAutoVariables">func (c *ExpressionCalculator) SetAutoVariables(value bool)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionCalculator.SetExpression">func (c *ExpressionCalculator) SetExpression(value string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionCalculator.SetOriginalTokens">func (c *ExpressionCalculator) SetOriginalTokens(value []*tokenizers.Token)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionCalculator.SetVariantOperations">func (c *ExpressionCalculator) SetVariantOperations(value variants.IVariantOperations)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionCalculator.VariantOperations">func (c *ExpressionCalculator) VariantOperations() variants.IVariantOperations</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/calculator/CalculationStack.go">CalculationStack.go</a>
+			
+				<a href="http://localhost:6060/src/calculator/ExpressionCalculator.go">ExpressionCalculator.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="CalculationStack">type <a href="http://localhost:6060/src/calculator/CalculationStack.go?s=156:216#L1">CalculationStack</a>
+				<a class="permalink" href="index.html#CalculationStack">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+CalculationStack implements a stack of Variant values.
+</p>
+
+			<pre>type CalculationStack struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewCalculationStack">func <a href="http://localhost:6060/src/calculator/CalculationStack.go?s=218:262#L1">NewCalculationStack</a>
+					<a class="permalink" href="index.html#NewCalculationStack">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewCalculationStack() *<a href="index.html#CalculationStack">CalculationStack</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="CalculationStack.Clear">func (*CalculationStack) <a href="http://localhost:6060/src/calculator/CalculationStack.go?s=1031:1065#L39">Clear</a>
+					<a class="permalink" href="index.html#CalculationStack.Clear">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CalculationStack">CalculationStack</a>) Clear()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CalculationStack.Length">func (*CalculationStack) <a href="http://localhost:6060/src/calculator/CalculationStack.go?s=339:378#L7">Length</a>
+					<a class="permalink" href="index.html#CalculationStack.Length">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CalculationStack">CalculationStack</a>) Length() <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CalculationStack.Peek">func (*CalculationStack) <a href="http://localhost:6060/src/calculator/CalculationStack.go?s=885:936#L32">Peek</a>
+					<a class="permalink" href="index.html#CalculationStack.Peek">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CalculationStack">CalculationStack</a>) Peek() *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#Variant">Variant</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CalculationStack.PeekAt">func (*CalculationStack) <a href="http://localhost:6060/src/calculator/CalculationStack.go?s=706:768#L24">PeekAt</a>
+					<a class="permalink" href="index.html#CalculationStack.PeekAt">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CalculationStack">CalculationStack</a>) PeekAt(index <a href="http://localhost:6060/pkg/builtin/#int">int</a>) *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#Variant">Variant</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CalculationStack.Pop">func (*CalculationStack) <a href="http://localhost:6060/src/calculator/CalculationStack.go?s=504:554#L15">Pop</a>
+					<a class="permalink" href="index.html#CalculationStack.Pop">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CalculationStack">CalculationStack</a>) Pop() *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#Variant">Variant</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CalculationStack.Push">func (*CalculationStack) <a href="http://localhost:6060/src/calculator/CalculationStack.go?s=406:462#L11">Push</a>
+					<a class="permalink" href="index.html#CalculationStack.Push">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CalculationStack">CalculationStack</a>) Push(value *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#Variant">Variant</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ExpressionCalculator">type <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=570:820#L3">ExpressionCalculator</a>
+				<a class="permalink" href="index.html#ExpressionCalculator">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+ExpressionCalculator implements an expression calculator class.
+</p>
+
+			<pre>type ExpressionCalculator struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="ExpressionCalculatorFromExpression">func <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=1405:1494#L26">ExpressionCalculatorFromExpression</a>
+					<a class="permalink" href="index.html#ExpressionCalculatorFromExpression">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func ExpressionCalculatorFromExpression(expression <a href="http://localhost:6060/pkg/builtin/#string">string</a>) (*<a href="index.html#ExpressionCalculator">ExpressionCalculator</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ExpressionCalculatorFromExpression constructs this class and assigns expression string.
+</p>
+<pre>Parameters:
+	- expression: The expression string.
+</pre>
+
+				
+				
+			
+				
+				<h3 id="ExpressionCalculatorFromTokens">func <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=1583:1676#L32">ExpressionCalculatorFromTokens</a>
+					<a class="permalink" href="index.html#ExpressionCalculatorFromTokens">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func ExpressionCalculatorFromTokens(originalTokens []*<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#Token">Token</a>) *<a href="index.html#ExpressionCalculator">ExpressionCalculator</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewExpressionCalculator">func <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=896:948#L12">NewExpressionCalculator</a>
+					<a class="permalink" href="index.html#NewExpressionCalculator">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewExpressionCalculator() *<a href="index.html#ExpressionCalculator">ExpressionCalculator</a></pre>
+				<p>
+NewExpressionCalculator constructs this class with default parameters.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="ExpressionCalculator.AutoVariables">func (*ExpressionCalculator) <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=2537:2588#L69">AutoVariables</a>
+					<a class="permalink" href="index.html#ExpressionCalculator.AutoVariables">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionCalculator">ExpressionCalculator</a>) AutoVariables() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a></pre>
+				<p>
+AutoVariables gets the flag to turn on auto creation of variables for specified expression.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpressionCalculator.Clear">func (*ExpressionCalculator) <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=4317:4355#L120">Clear</a>
+					<a class="permalink" href="index.html#ExpressionCalculator.Clear">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionCalculator">ExpressionCalculator</a>) Clear()</pre>
+				<p>
+Clear cleans up this calculator from all data.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpressionCalculator.CreateVariables">func (*ExpressionCalculator) <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=4020:4102#L111">CreateVariables</a>
+					<a class="permalink" href="index.html#ExpressionCalculator.CreateVariables">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionCalculator">ExpressionCalculator</a>) CreateVariables(vars <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/calculator/variables/">variables</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/calculator/variables/#IVariableCollection">IVariableCollection</a>)</pre>
+				<p>
+CreateVariables populates the specified variables list with variables from parsed expression.
+</p>
+<pre>Parameters:
+	- variables: The list of variables to be populated.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpressionCalculator.DefaultFunctions">func (*ExpressionCalculator) <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=3404:3483#L94">DefaultFunctions</a>
+					<a class="permalink" href="index.html#ExpressionCalculator.DefaultFunctions">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionCalculator">ExpressionCalculator</a>) DefaultFunctions() <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/calculator/functions/">functions</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/calculator/functions/#IFunctionCollection">IFunctionCollection</a></pre>
+				<p>
+DefaultFunctions the list with default functions.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpressionCalculator.DefaultVariables">func (*ExpressionCalculator) <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=3239:3318#L89">DefaultVariables</a>
+					<a class="permalink" href="index.html#ExpressionCalculator.DefaultVariables">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionCalculator">ExpressionCalculator</a>) DefaultVariables() <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/calculator/variables/">variables</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/calculator/variables/#IVariableCollection">IVariableCollection</a></pre>
+				<p>
+DefaultVariables the list with default variables.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpressionCalculator.Evaluate">func (*ExpressionCalculator) <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=4517:4585#L127">Evaluate</a>
+					<a class="permalink" href="index.html#ExpressionCalculator.Evaluate">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionCalculator">ExpressionCalculator</a>) Evaluate() (*<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#Variant">Variant</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Evaluate this expression using default variables and functions.
+</p>
+<pre>Returns: An evaluated expression value.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpressionCalculator.EvaluateUsingVariables">func (*ExpressionCalculator) <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=4822:4940#L135">EvaluateUsingVariables</a>
+					<a class="permalink" href="index.html#ExpressionCalculator.EvaluateUsingVariables">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionCalculator">ExpressionCalculator</a>) EvaluateUsingVariables(
+    vars <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/calculator/variables/">variables</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/calculator/variables/#IVariableCollection">IVariableCollection</a>) (*<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#Variant">Variant</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+EvaluateUsingVariables evaluates this expression using specified variables.
+</p>
+<pre>Parameters:
+	- variables: The list of variables
+Returns: An evaluated expression value.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpressionCalculator.EvaluateUsingVariablesAndFunctions">func (*ExpressionCalculator) <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=5244:5411#L145">EvaluateUsingVariablesAndFunctions</a>
+					<a class="permalink" href="index.html#ExpressionCalculator.EvaluateUsingVariablesAndFunctions">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionCalculator">ExpressionCalculator</a>) EvaluateUsingVariablesAndFunctions(
+    vars <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/calculator/variables/">variables</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/calculator/variables/#IVariableCollection">IVariableCollection</a>, funcs <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/calculator/functions/">functions</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/calculator/functions/#IFunctionCollection">IFunctionCollection</a>) (*<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#Variant">Variant</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+EvaluateUsingVariablesAndFunctions evaluates this expression using specified variables and functions.
+</p>
+<pre>Parameters:
+	- variables: The list of variables
+	- functions: The list of functions.
+Returns: An evaluated expression value.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpressionCalculator.Expression">func (*ExpressionCalculator) <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=1803:1853#L39">Expression</a>
+					<a class="permalink" href="index.html#ExpressionCalculator.Expression">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionCalculator">ExpressionCalculator</a>) Expression() <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+				<p>
+Expression gets the expression string.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpressionCalculator.InitialTokens">func (*ExpressionCalculator) <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=3573:3646#L99">InitialTokens</a>
+					<a class="permalink" href="index.html#ExpressionCalculator.InitialTokens">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionCalculator">ExpressionCalculator</a>) InitialTokens() []*<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/calculator/parsers/">parsers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/calculator/parsers/#ExpressionToken">ExpressionToken</a></pre>
+				<p>
+InitialTokens the list of original expression tokens.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpressionCalculator.OriginalTokens">func (*ExpressionCalculator) <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=2154:2221#L57">OriginalTokens</a>
+					<a class="permalink" href="index.html#ExpressionCalculator.OriginalTokens">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionCalculator">ExpressionCalculator</a>) OriginalTokens() []*<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#Token">Token</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ExpressionCalculator.ResultTokens">func (*ExpressionCalculator) <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=3742:3814#L104">ResultTokens</a>
+					<a class="permalink" href="index.html#ExpressionCalculator.ResultTokens">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionCalculator">ExpressionCalculator</a>) ResultTokens() []*<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/calculator/parsers/">parsers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/calculator/parsers/#ExpressionToken">ExpressionToken</a></pre>
+				<p>
+ResultTokens the list of processed expression tokens.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpressionCalculator.SetAutoVariables">func (*ExpressionCalculator) <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=2716:2775#L74">SetAutoVariables</a>
+					<a class="permalink" href="index.html#ExpressionCalculator.SetAutoVariables">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionCalculator">ExpressionCalculator</a>) SetAutoVariables(value <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>)</pre>
+				<p>
+SetAutoVariables sets the flag to turn on auto creation of variables for specified expression.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpressionCalculator.SetExpression">func (*ExpressionCalculator) <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=1934:1998#L44">SetExpression</a>
+					<a class="permalink" href="index.html#ExpressionCalculator.SetExpression">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionCalculator">ExpressionCalculator</a>) SetExpression(value <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				<p>
+SetExpression sets the expression string.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpressionCalculator.SetOriginalTokens">func (*ExpressionCalculator) <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=2261:2336#L61">SetOriginalTokens</a>
+					<a class="permalink" href="index.html#ExpressionCalculator.SetOriginalTokens">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionCalculator">ExpressionCalculator</a>) SetOriginalTokens(value []*<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#Token">Token</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ExpressionCalculator.SetVariantOperations">func (*ExpressionCalculator) <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=3065:3151#L84">SetVariantOperations</a>
+					<a class="permalink" href="index.html#ExpressionCalculator.SetVariantOperations">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionCalculator">ExpressionCalculator</a>) SetVariantOperations(value <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#IVariantOperations">IVariantOperations</a>)</pre>
+				<p>
+SetVariantOperations sets the manager for operations on variant values.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpressionCalculator.VariantOperations">func (*ExpressionCalculator) <a href="http://localhost:6060/src/calculator/ExpressionCalculator.go?s=2878:2956#L79">VariantOperations</a>
+					<a class="permalink" href="index.html#ExpressionCalculator.VariantOperations">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionCalculator">ExpressionCalculator</a>) VariantOperations() <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#IVariantOperations">IVariantOperations</a></pre>
+				<p>
+VariantOperations gets the manager for operations on variant values.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="errors/index.html">errors</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						
+					</td>
+				</tr>
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="functions/index.html">functions</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						
+					</td>
+				</tr>
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="parsers/index.html">parsers</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						
+					</td>
+				</tr>
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="tokenizers/index.html">tokenizers</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						
+					</td>
+				</tr>
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="variables/index.html">variables</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						
+					</td>
+				</tr>
+			
+		</table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.18.2.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

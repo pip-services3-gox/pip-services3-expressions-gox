@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>variables - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.18.2";</script>
+<script src="../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package variables
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "calculator/variables"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#IVariable">type IVariable</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#IVariableCollection">type IVariableCollection</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Variable">type Variable</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#EmptyVariable">func EmptyVariable(name string) *Variable</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewVariable">func NewVariable(name string, value *variants.Variant) *Variable</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Variable.Name">func (c *Variable) Name() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Variable.SetValue">func (c *Variable) SetValue(value *variants.Variant)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Variable.Value">func (c *Variable) Value() *variants.Variant</a></dd>
+				
+			
+				
+				<dd><a href="index.html#VariableCollection">type VariableCollection</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewVariableCollection">func NewVariableCollection() *VariableCollection</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VariableCollection.Add">func (c *VariableCollection) Add(variable IVariable)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VariableCollection.Clear">func (c *VariableCollection) Clear()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VariableCollection.ClearValues">func (c *VariableCollection) ClearValues()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VariableCollection.FindByName">func (c *VariableCollection) FindByName(name string) IVariable</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VariableCollection.FindIndexByName">func (c *VariableCollection) FindIndexByName(name string) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VariableCollection.Get">func (c *VariableCollection) Get(index int) IVariable</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VariableCollection.GetAll">func (c *VariableCollection) GetAll() []IVariable</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VariableCollection.Length">func (c *VariableCollection) Length() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VariableCollection.Locate">func (c *VariableCollection) Locate(name string) IVariable</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VariableCollection.Remove">func (c *VariableCollection) Remove(index int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VariableCollection.RemoveByName">func (c *VariableCollection) RemoveByName(name string)</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/calculator/variables/IVariable.go">IVariable.go</a>
+			
+				<a href="http://localhost:6060/src/calculator/variables/IVariableCollection.go">IVariableCollection.go</a>
+			
+				<a href="http://localhost:6060/src/calculator/variables/Variable.go">Variable.go</a>
+			
+				<a href="http://localhost:6060/src/calculator/variables/VariableCollection.go">VariableCollection.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="IVariable">type <a href="http://localhost:6060/src/calculator/variables/IVariable.go?s=140:348#L1">IVariable</a>
+				<a class="permalink" href="index.html#IVariable">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+IVariable defines a variable interface.
+</p>
+
+			<pre>type IVariable interface {
+    <span class="comment">// Name the variable name.</span>
+    Name() <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+
+    <span class="comment">// Value gets the variable value.</span>
+    Value() *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#Variant">Variant</a>
+
+    <span class="comment">// SetValue sets the variable value.</span>
+    SetValue(value *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#Variant">Variant</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IVariableCollection">type <a href="http://localhost:6060/src/calculator/variables/IVariableCollection.go?s=68:1613#L1">IVariableCollection</a>
+				<a class="permalink" href="index.html#IVariableCollection">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+IVariableCollection defines a variables list.
+</p>
+
+			<pre>type IVariableCollection interface {
+    <span class="comment">// Add a new variable to the collection.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- variable: a variable to be added.</span>
+    Add(variable <a href="index.html#IVariable">IVariable</a>)
+
+    <span class="comment">// Length number of variables stored in the collection.</span>
+    Length() <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+
+    <span class="comment">// Get a variable by its index.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- index: a variable index.</span>
+    <span class="comment">//	Returns: a retrieved variable.</span>
+    Get(index <a href="http://localhost:6060/pkg/builtin/#int">int</a>) <a href="index.html#IVariable">IVariable</a>
+
+    <span class="comment">// GetAll variables stores in the collection</span>
+    <span class="comment">//	Returns: a list with variables.</span>
+    GetAll() []<a href="index.html#IVariable">IVariable</a>
+
+    <span class="comment">// FindIndexByName finds variable index in the list by it&#39;s name.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- name: The variable name to be found.</span>
+    <span class="comment">//	Returns: Variable index in the list or &lt;code&gt;-1&lt;/code&gt; if variable was not found.</span>
+    FindIndexByName(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+
+    <span class="comment">// FindByName finds variable in the list by it&#39;s name.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- name: The variable name to be found.</span>
+    <span class="comment">//	Returns: Variable or &lt;code&gt;null&lt;/code&gt; if function was not found.</span>
+    FindByName(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="index.html#IVariable">IVariable</a>
+
+    <span class="comment">// Locate variable in the list or create a new one if variable was not found.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- name: The variable name to be found.</span>
+    <span class="comment">//	Returns: Found or created variable.</span>
+    Locate(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="index.html#IVariable">IVariable</a>
+
+    <span class="comment">// Remove a variable by its index.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- index: a index of the variable to be removed.</span>
+    Remove(index <a href="http://localhost:6060/pkg/builtin/#int">int</a>)
+
+    <span class="comment">// RemoveByName removes variable by it&#39;s name.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- name: The variable name to be removed.</span>
+    RemoveByName(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>)
+
+    <span class="comment">// Clear the collection.</span>
+    Clear()
+
+    <span class="comment">// ClearValues clears all stored variables (assigns null values).</span>
+    ClearValues()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Variable">type <a href="http://localhost:6060/src/calculator/variables/Variable.go?s=146:209#L1">Variable</a>
+				<a class="permalink" href="index.html#Variable">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+Variable implements a variable holder object.
+</p>
+
+			<pre>type Variable struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="EmptyVariable">func <a href="http://localhost:6060/src/calculator/variables/Variable.go?s=315:356#L4">EmptyVariable</a>
+					<a class="permalink" href="index.html#EmptyVariable">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func EmptyVariable(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>) *<a href="index.html#Variable">Variable</a></pre>
+				<p>
+EmptyVariable constructs a new empty variable.
+</p>
+<pre>Parameters:
+	- name: The name of this variable.
+</pre>
+
+				
+				
+			
+				
+				<h3 id="NewVariable">func <a href="http://localhost:6060/src/calculator/variables/Variable.go?s=541:605#L12">NewVariable</a>
+					<a class="permalink" href="index.html#NewVariable">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewVariable(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>, value *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#Variant">Variant</a>) *<a href="index.html#Variable">Variable</a></pre>
+				<p>
+NewVariable constructs this variable with name and value.
+</p>
+<pre>Parameters:
+	- name: The name of this variable.
+	- value: The variable value.
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Variable.Name">func (*Variable) <a href="http://localhost:6060/src/calculator/variables/Variable.go?s=813:845#L27">Name</a>
+					<a class="permalink" href="index.html#Variable.Name">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#Variable">Variable</a>) Name() <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+				<p>
+Name variable name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Variable.SetValue">func (*Variable) <a href="http://localhost:6060/src/calculator/variables/Variable.go?s=993:1045#L37">SetValue</a>
+					<a class="permalink" href="index.html#Variable.SetValue">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#Variable">Variable</a>) SetValue(value *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#Variant">Variant</a>)</pre>
+				<p>
+SetValue the variable value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Variable.Value">func (*Variable) <a href="http://localhost:6060/src/calculator/variables/Variable.go?s=895:939#L32">Value</a>
+					<a class="permalink" href="index.html#Variable.Value">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#Variable">Variable</a>) Value() *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#Variant">Variant</a></pre>
+				<p>
+Value the variable value.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="VariableCollection">type <a href="http://localhost:6060/src/calculator/variables/VariableCollection.go?s=165:222#L1">VariableCollection</a>
+				<a class="permalink" href="index.html#VariableCollection">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+VariableCollection implements a variables list.
+</p>
+
+			<pre>type VariableCollection struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewVariableCollection">func <a href="http://localhost:6060/src/calculator/variables/VariableCollection.go?s=224:272#L4">NewVariableCollection</a>
+					<a class="permalink" href="index.html#NewVariableCollection">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewVariableCollection() *<a href="index.html#VariableCollection">VariableCollection</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="VariableCollection.Add">func (*VariableCollection) <a href="http://localhost:6060/src/calculator/variables/VariableCollection.go?s=442:494#L14">Add</a>
+					<a class="permalink" href="index.html#VariableCollection.Add">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#VariableCollection">VariableCollection</a>) Add(variable <a href="index.html#IVariable">IVariable</a>)</pre>
+				<p>
+Add a new variable to the collection.
+</p>
+<pre>Parameters:
+	- variable: a variable to be added.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="VariableCollection.Clear">func (*VariableCollection) <a href="http://localhost:6060/src/calculator/variables/VariableCollection.go?s=2798:2834#L99">Clear</a>
+					<a class="permalink" href="index.html#VariableCollection.Clear">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#VariableCollection">VariableCollection</a>) Clear()</pre>
+				<p>
+Clear the collection.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VariableCollection.ClearValues">func (*VariableCollection) <a href="http://localhost:6060/src/calculator/variables/VariableCollection.go?s=2935:2977#L104">ClearValues</a>
+					<a class="permalink" href="index.html#VariableCollection.ClearValues">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#VariableCollection">VariableCollection</a>) ClearValues()</pre>
+				<p>
+ClearValues clears all stored variables (assigns null values).
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VariableCollection.FindByName">func (*VariableCollection) <a href="http://localhost:6060/src/calculator/variables/VariableCollection.go?s=1734:1796#L60">FindByName</a>
+					<a class="permalink" href="index.html#VariableCollection.FindByName">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#VariableCollection">VariableCollection</a>) FindByName(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="index.html#IVariable">IVariable</a></pre>
+				<p>
+FindByName finds variable in the list by it&#39;s name.
+</p>
+<pre>Parameters:
+	- name: The variable name to be found.
+Returns: Variable or &lt;code&gt;null&lt;/code&gt; if function was not found.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="VariableCollection.FindIndexByName">func (*VariableCollection) <a href="http://localhost:6060/src/calculator/variables/VariableCollection.go?s=1350:1411#L46">FindIndexByName</a>
+					<a class="permalink" href="index.html#VariableCollection.FindIndexByName">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#VariableCollection">VariableCollection</a>) FindIndexByName(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+FindIndexByName variable index in the list by it&#39;s name.
+</p>
+<pre>Parameters:
+	- name: The variable name to be found.
+Returns: Variable index in the list or &lt;code&gt;-1&lt;/code&gt; if variable was not found.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="VariableCollection.Get">func (*VariableCollection) <a href="http://localhost:6060/src/calculator/variables/VariableCollection.go?s=845:898#L30">Get</a>
+					<a class="permalink" href="index.html#VariableCollection.Get">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#VariableCollection">VariableCollection</a>) Get(index <a href="http://localhost:6060/pkg/builtin/#int">int</a>) <a href="index.html#IVariable">IVariable</a></pre>
+				<p>
+Get a variable by its index.
+</p>
+<pre>Parameters:
+	- index: a variable index.
+Returns: a retrieved variable.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="VariableCollection.GetAll">func (*VariableCollection) <a href="http://localhost:6060/src/calculator/variables/VariableCollection.go?s=1011:1060#L36">GetAll</a>
+					<a class="permalink" href="index.html#VariableCollection.GetAll">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#VariableCollection">VariableCollection</a>) GetAll() []<a href="index.html#IVariable">IVariable</a></pre>
+				<p>
+GetAll variables stores in the collection
+</p>
+<pre>Returns: a list with variables.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="VariableCollection.Length">func (*VariableCollection) <a href="http://localhost:6060/src/calculator/variables/VariableCollection.go?s=661:702#L22">Length</a>
+					<a class="permalink" href="index.html#VariableCollection.Length">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#VariableCollection">VariableCollection</a>) Length() <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+Length number of variables stored in the collection.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VariableCollection.Locate">func (*VariableCollection) <a href="http://localhost:6060/src/calculator/variables/VariableCollection.go?s=2077:2135#L72">Locate</a>
+					<a class="permalink" href="index.html#VariableCollection.Locate">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#VariableCollection">VariableCollection</a>) Locate(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="index.html#IVariable">IVariable</a></pre>
+				<p>
+Locate finds variable in the list or create a new one if variable was not found.
+</p>
+<pre>Parameters:
+	- name: The variable name to be found.
+Returns: Found or created variable.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="VariableCollection.Remove">func (*VariableCollection) <a href="http://localhost:6060/src/calculator/variables/VariableCollection.go?s=2361:2407#L84">Remove</a>
+					<a class="permalink" href="index.html#VariableCollection.Remove">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#VariableCollection">VariableCollection</a>) Remove(index <a href="http://localhost:6060/pkg/builtin/#int">int</a>)</pre>
+				<p>
+Remove a variable by its index.
+</p>
+<pre>Parameters:
+	- index: a index of the variable to be removed.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="VariableCollection.RemoveByName">func (*VariableCollection) <a href="http://localhost:6060/src/calculator/variables/VariableCollection.go?s=2589:2643#L91">RemoveByName</a>
+					<a class="permalink" href="index.html#VariableCollection.RemoveByName">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#VariableCollection">VariableCollection</a>) RemoveByName(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>)</pre>
+				<p>
+RemoveByName removes variable by it&#39;s name.
+</p>
+<pre>Parameters:
+	- name: The variable name to be removed.
+</pre>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.18.2.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>generic - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.18.2";</script>
+<script src="../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package generic
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "tokenizers/generic"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#CCommentState">type CCommentState</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewCCommentState">func NewCCommentState() *CCommentState</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CCommentState.NextToken">func (c *CCommentState) NextToken(scanner io.IScanner, tokenizer tokenizers.ITokenizer) *tokenizers.Token</a></dd>
+				
+			
+				
+				<dd><a href="index.html#CppCommentState">type CppCommentState</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewCppCommentState">func NewCppCommentState() *CppCommentState</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CppCommentState.GetMultiLineComment">func (c *CppCommentState) GetMultiLineComment(scanner io.IScanner) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CppCommentState.GetSingleLineComment">func (c *CppCommentState) GetSingleLineComment(scanner io.IScanner) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CppCommentState.NextToken">func (c *CppCommentState) NextToken(scanner io.IScanner, tokenizer tokenizers.ITokenizer) *tokenizers.Token</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GenericCommentState">type GenericCommentState</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewGenericCommentState">func NewGenericCommentState() *GenericCommentState</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GenericCommentState.NextToken">func (c *GenericCommentState) NextToken(scanner io.IScanner, tokenizer tokenizers.ITokenizer) *tokenizers.Token</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GenericNumberState">type GenericNumberState</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewGenericNumberState">func NewGenericNumberState() *GenericNumberState</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GenericNumberState.NextToken">func (c *GenericNumberState) NextToken(scanner io.IScanner, tokenizer tokenizers.ITokenizer) *tokenizers.Token</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GenericQuoteState">type GenericQuoteState</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewGenericQuoteState">func NewGenericQuoteState() *GenericQuoteState</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GenericQuoteState.DecodeString">func (c *GenericQuoteState) DecodeString(value string, quoteSymbol rune) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GenericQuoteState.EncodeString">func (c *GenericQuoteState) EncodeString(value string, quoteSymbol rune) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GenericQuoteState.NextToken">func (c *GenericQuoteState) NextToken(scanner io.IScanner, tokenizer tokenizers.ITokenizer) *tokenizers.Token</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GenericSymbolState">type GenericSymbolState</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewGenericSymbolState">func NewGenericSymbolState() *GenericSymbolState</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GenericSymbolState.Add">func (c *GenericSymbolState) Add(value string, tokenType int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GenericSymbolState.NextToken">func (c *GenericSymbolState) NextToken(scanner io.IScanner, tokenizer tokenizers.ITokenizer) *tokenizers.Token</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GenericTokenizer">type GenericTokenizer</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewGenericTokenizer">func NewGenericTokenizer() *GenericTokenizer</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#GenericWhitespaceState">type GenericWhitespaceState</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewGenericWhitespaceState">func NewGenericWhitespaceState() *GenericWhitespaceState</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GenericWhitespaceState.ClearWhitespaceChars">func (c *GenericWhitespaceState) ClearWhitespaceChars()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GenericWhitespaceState.NextToken">func (c *GenericWhitespaceState) NextToken(scanner io.IScanner, tokenizer tokenizers.ITokenizer) *tokenizers.Token</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GenericWhitespaceState.SetWhitespaceChars">func (c *GenericWhitespaceState) SetWhitespaceChars(fromSymbol rune, toSymbol rune, enable bool)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GenericWordState">type GenericWordState</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewGenericWordState">func NewGenericWordState() *GenericWordState</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GenericWordState.ClearWordChars">func (c *GenericWordState) ClearWordChars()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GenericWordState.NextToken">func (c *GenericWordState) NextToken(scanner io.IScanner, tokenizer tokenizers.ITokenizer) *tokenizers.Token</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GenericWordState.SetWordChars">func (c *GenericWordState) SetWordChars(fromSymbol rune, toSymbol rune, enable bool)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SymbolNode">type SymbolNode</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewSymbolNode">func NewSymbolNode(parent *SymbolNode, character rune) *SymbolNode</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SymbolNode.AddDescendantLine">func (c *SymbolNode) AddDescendantLine(value []rune, tokenType int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SymbolNode.Ancestry">func (c *SymbolNode) Ancestry() []rune</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SymbolNode.DeepestRead">func (c *SymbolNode) DeepestRead(scanner io.IScanner) *SymbolNode</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SymbolNode.EnsureChildWithChar">func (c *SymbolNode) EnsureChildWithChar(value rune) *SymbolNode</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SymbolNode.FindChildWithChar">func (c *SymbolNode) FindChildWithChar(value rune) *SymbolNode</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SymbolNode.SetTokenType">func (c *SymbolNode) SetTokenType(value int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SymbolNode.SetValid">func (c *SymbolNode) SetValid(value bool)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SymbolNode.TokenType">func (c *SymbolNode) TokenType() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SymbolNode.UnreadToValid">func (c *SymbolNode) UnreadToValid(scanner io.IScanner) *SymbolNode</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SymbolNode.Valid">func (c *SymbolNode) Valid() bool</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SymbolRootNode">type SymbolRootNode</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewSymbolRootNode">func NewSymbolRootNode() *SymbolRootNode</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SymbolRootNode.Add">func (c *SymbolRootNode) Add(value string, tokenType int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SymbolRootNode.NextToken">func (c *SymbolRootNode) NextToken(scanner io.IScanner) *tokenizers.Token</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/tokenizers/generic/CCommentState.go">CCommentState.go</a>
+			
+				<a href="http://localhost:6060/src/tokenizers/generic/CppCommentState.go">CppCommentState.go</a>
+			
+				<a href="http://localhost:6060/src/tokenizers/generic/GenericCommentState.go">GenericCommentState.go</a>
+			
+				<a href="http://localhost:6060/src/tokenizers/generic/GenericNumberState.go">GenericNumberState.go</a>
+			
+				<a href="http://localhost:6060/src/tokenizers/generic/GenericQuoteState.go">GenericQuoteState.go</a>
+			
+				<a href="http://localhost:6060/src/tokenizers/generic/GenericSymbolState.go">GenericSymbolState.go</a>
+			
+				<a href="http://localhost:6060/src/tokenizers/generic/GenericTokenizer.go">GenericTokenizer.go</a>
+			
+				<a href="http://localhost:6060/src/tokenizers/generic/GenericWhitespaceState.go">GenericWhitespaceState.go</a>
+			
+				<a href="http://localhost:6060/src/tokenizers/generic/GenericWordState.go">GenericWordState.go</a>
+			
+				<a href="http://localhost:6060/src/tokenizers/generic/SymbolNode.go">SymbolNode.go</a>
+			
+				<a href="http://localhost:6060/src/tokenizers/generic/SymbolRootNode.go">SymbolRootNode.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="CCommentState">type <a href="http://localhost:6060/src/tokenizers/generic/CCommentState.go?s=374:420#L1">CCommentState</a>
+				<a class="permalink" href="index.html#CCommentState">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+CCommentState this state will either delegate to a comment-handling state,
+or return a token with just a slash in it.
+</p>
+
+			<pre>type CCommentState struct {
+    <a href="index.html#CppCommentState">CppCommentState</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewCCommentState">func <a href="http://localhost:6060/src/tokenizers/generic/CCommentState.go?s=422:460#L5">NewCCommentState</a>
+					<a class="permalink" href="index.html#NewCCommentState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewCCommentState() *<a href="index.html#CCommentState">CCommentState</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="CCommentState.NextToken">func (*CCommentState) <a href="http://localhost:6060/src/tokenizers/generic/CCommentState.go?s=741:848#L14">NextToken</a>
+					<a class="permalink" href="index.html#CCommentState.NextToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CCommentState">CCommentState</a>) NextToken(
+    scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>, tokenizer <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#ITokenizer">ITokenizer</a>) *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#Token">Token</a></pre>
+				<p>
+NextToken either delegate to a comment-handling state, or return a token with just a slash in it.
+</p>
+<pre>Returns: Either just a slash token, or the results of delegating to a comment-handling state.
+</pre>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="CppCommentState">type <a href="http://localhost:6060/src/tokenizers/generic/CppCommentState.go?s=388:417#L3">CppCommentState</a>
+				<a class="permalink" href="index.html#CppCommentState">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+CppCommentState this state will either delegate to a comment-handling state,
+or return a token with just a slash in it.
+</p>
+
+			<pre>type CppCommentState struct{}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewCppCommentState">func <a href="http://localhost:6060/src/tokenizers/generic/CppCommentState.go?s=419:461#L5">NewCppCommentState</a>
+					<a class="permalink" href="index.html#NewCppCommentState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewCppCommentState() *<a href="index.html#CppCommentState">CppCommentState</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="CppCommentState.GetMultiLineComment">func (*CppCommentState) <a href="http://localhost:6060/src/tokenizers/generic/CppCommentState.go?s=619:692#L11">GetMultiLineComment</a>
+					<a class="permalink" href="index.html#CppCommentState.GetMultiLineComment">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CppCommentState">CppCommentState</a>) GetMultiLineComment(scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>) <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+				<p>
+GetMultiLineComment ignore everything up to a closing star and slash, and then return the tokenizer&#39;s next token.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CppCommentState.GetSingleLineComment">func (*CppCommentState) <a href="http://localhost:6060/src/tokenizers/generic/CppCommentState.go?s=1108:1182#L30">GetSingleLineComment</a>
+					<a class="permalink" href="index.html#CppCommentState.GetSingleLineComment">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CppCommentState">CppCommentState</a>) GetSingleLineComment(scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>) <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+				<p>
+GetSingleLineComment ignore everything up to an end-of-line and return the tokenizer&#39;s next token.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CppCommentState.NextToken">func (*CppCommentState) <a href="http://localhost:6060/src/tokenizers/generic/CppCommentState.go?s=1704:1813#L50">NextToken</a>
+					<a class="permalink" href="index.html#CppCommentState.NextToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CppCommentState">CppCommentState</a>) NextToken(
+    scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>, tokenizer <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#ITokenizer">ITokenizer</a>) *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#Token">Token</a></pre>
+				<p>
+NextToken either delegate to a comment-handling state, or return a token with just a slash in it.
+</p>
+<pre>Returns: either just a slash token, or the results of delegating to a comment-handling state.
+</pre>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GenericCommentState">type <a href="http://localhost:6060/src/tokenizers/generic/GenericCommentState.go?s=341:374#L2">GenericCommentState</a>
+				<a class="permalink" href="index.html#GenericCommentState">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+GenericCommentState a CommentState object returns a comment from a scanner.
+</p>
+
+			<pre>type GenericCommentState struct{}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewGenericCommentState">func <a href="http://localhost:6060/src/tokenizers/generic/GenericCommentState.go?s=376:426#L4">NewGenericCommentState</a>
+					<a class="permalink" href="index.html#NewGenericCommentState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewGenericCommentState() *<a href="index.html#GenericCommentState">GenericCommentState</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="GenericCommentState.NextToken">func (*GenericCommentState) <a href="http://localhost:6060/src/tokenizers/generic/GenericCommentState.go?s=668:781#L11">NextToken</a>
+					<a class="permalink" href="index.html#GenericCommentState.NextToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#GenericCommentState">GenericCommentState</a>) NextToken(
+    scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>, tokenizer <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#ITokenizer">ITokenizer</a>) *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#Token">Token</a></pre>
+				<p>
+NextToken either delegate to a comment-handling state, or return a token with just a slash in it.
+</p>
+<pre>Returns: either just a slash token, or the results of delegating to a comment-handling state
+</pre>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GenericNumberState">type <a href="http://localhost:6060/src/tokenizers/generic/GenericNumberState.go?s=516:548#L4">GenericNumberState</a>
+				<a class="permalink" href="index.html#GenericNumberState">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+GenericNumberState a NumberState object returns a number from a scanner. This state&#39;s idea of a number allows
+an optional, initial minus sign, followed by one or more digits. A decimal point and another string
+of digits may follow these digits.
+</p>
+
+			<pre>type GenericNumberState struct{}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewGenericNumberState">func <a href="http://localhost:6060/src/tokenizers/generic/GenericNumberState.go?s=550:598#L6">NewGenericNumberState</a>
+					<a class="permalink" href="index.html#NewGenericNumberState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewGenericNumberState() *<a href="index.html#GenericNumberState">GenericNumberState</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="GenericNumberState.NextToken">func (*GenericNumberState) <a href="http://localhost:6060/src/tokenizers/generic/GenericNumberState.go?s=921:1033#L16">NextToken</a>
+					<a class="permalink" href="index.html#GenericNumberState.NextToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#GenericNumberState">GenericNumberState</a>) NextToken(
+    scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>, tokenizer <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#ITokenizer">ITokenizer</a>) *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#Token">Token</a></pre>
+				<p>
+NextToken gets the next token from the stream started from the character linked to this state.
+</p>
+<pre>Parameters:
+	- scanner: A textual string to be tokenized.
+	- tokenizer: A tokenizer class that controls the process.
+Returns: The next token from the top of the stream.
+</pre>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GenericQuoteState">type <a href="http://localhost:6060/src/tokenizers/generic/GenericQuoteState.go?s=675:706#L6">GenericQuoteState</a>
+				<a class="permalink" href="index.html#GenericQuoteState">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+GenericQuoteState a quoteState returns a quoted string token from a scanner. This state will collect characters
+until it sees a match to the character that the tokenizer used to switch to this state.
+For example, if a tokenizer uses a double-quote character to enter this state,
+then &lt;code&gt;nextToken()&lt;/code&gt; will search for another double-quote until it finds one
+or finds the end of the scanner.
+</p>
+
+			<pre>type GenericQuoteState struct{}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewGenericQuoteState">func <a href="http://localhost:6060/src/tokenizers/generic/GenericQuoteState.go?s=708:754#L8">NewGenericQuoteState</a>
+					<a class="permalink" href="index.html#NewGenericQuoteState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewGenericQuoteState() *<a href="index.html#GenericQuoteState">GenericQuoteState</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="GenericQuoteState.DecodeString">func (*GenericQuoteState) <a href="http://localhost:6060/src/tokenizers/generic/GenericQuoteState.go?s=2159:2238#L57">DecodeString</a>
+					<a class="permalink" href="index.html#GenericQuoteState.DecodeString">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#GenericQuoteState">GenericQuoteState</a>) DecodeString(value <a href="http://localhost:6060/pkg/builtin/#string">string</a>, quoteSymbol <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>) <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+				<p>
+DecodeString decodes a string value.
+</p>
+<pre>Parameters:
+	- value: A string value to be decoded.
+	- quoteSymbol: A string quote character.
+Returns&gt;: An decoded string.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="GenericQuoteState.EncodeString">func (*GenericQuoteState) <a href="http://localhost:6060/src/tokenizers/generic/GenericQuoteState.go?s=1757:1836#L44">EncodeString</a>
+					<a class="permalink" href="index.html#GenericQuoteState.EncodeString">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#GenericQuoteState">GenericQuoteState</a>) EncodeString(value <a href="http://localhost:6060/pkg/builtin/#string">string</a>, quoteSymbol <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>) <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+				<p>
+EncodeString encodes a string value.
+</p>
+<pre>Parameters:
+	- value: A string value to be encoded.
+	- quoteSymbol: A string quote character.
+Returns: An encoded string.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="GenericQuoteState.NextToken">func (*GenericQuoteState) <a href="http://localhost:6060/src/tokenizers/generic/GenericQuoteState.go?s=1035:1146#L17">NextToken</a>
+					<a class="permalink" href="index.html#GenericQuoteState.NextToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#GenericQuoteState">GenericQuoteState</a>) NextToken(
+    scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>, tokenizer <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#ITokenizer">ITokenizer</a>) *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#Token">Token</a></pre>
+				<p>
+NextToken return a quoted string token from a scanner. This method will collect
+characters until it sees a match to the character that the tokenizer used
+to switch to this state.
+</p>
+<pre>Returns: a quoted string token from a scanner.
+</pre>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GenericSymbolState">type <a href="http://localhost:6060/src/tokenizers/generic/GenericSymbolState.go?s=1260:1319#L12">GenericSymbolState</a>
+				<a class="permalink" href="index.html#GenericSymbolState">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+GenericSymbolState the idea of a symbol is a character that stands on its own, such as an ampersand or a parenthesis.
+For example, when tokenizing the expression &lt;code&gt;(isReady)&amp; (isWilling) &lt;/code&gt;, a typical
+tokenizer would return 7 tokens, including one for each parenthesis and one for the ampersand.
+Thus a series of symbols such as &lt;code&gt;)&amp;( &lt;/code&gt; becomes three tokens, while a series of letters
+such as &lt;code&gt;isReady&lt;/code&gt; becomes a single word token.
+&lt;p/&gt;
+Multi-character symbols are an exception to the rule that a symbol is a standalone character.
+For example, a tokenizer may want less-than-or-equals to tokenize as a single token. This class
+provides a method for establishing which multi-character symbols an object of this class should
+treat as single symbols. This allows, for example, &lt;code&gt;&#34;cat &amp;lt;= dog&#34;&lt;/code&gt; to tokenize as
+three tokens, rather than splitting the less-than and equals symbols into separate tokens.
+&lt;p/&gt;
+By default, this state recognizes the following multi-character symbols:
+&lt;code&gt;!=, :-, &amp;lt;=, &amp;gt;=&lt;/code&gt;
+</p>
+
+			<pre>type GenericSymbolState struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewGenericSymbolState">func <a href="http://localhost:6060/src/tokenizers/generic/GenericSymbolState.go?s=1321:1369#L16">NewGenericSymbolState</a>
+					<a class="permalink" href="index.html#NewGenericSymbolState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewGenericSymbolState() *<a href="index.html#GenericSymbolState">GenericSymbolState</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="GenericSymbolState.Add">func (*GenericSymbolState) <a href="http://localhost:6060/src/tokenizers/generic/GenericSymbolState.go?s=1791:1852#L33">Add</a>
+					<a class="permalink" href="index.html#GenericSymbolState.Add">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#GenericSymbolState">GenericSymbolState</a>) Add(value <a href="http://localhost:6060/pkg/builtin/#string">string</a>, tokenType <a href="http://localhost:6060/pkg/builtin/#int">int</a>)</pre>
+				<p>
+Add a multi-character symbol.
+</p>
+<pre>Parameters:
+	- value: the symbol to add, such as &#34;=:=&#34;
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="GenericSymbolState.NextToken">func (*GenericSymbolState) <a href="http://localhost:6060/src/tokenizers/generic/GenericSymbolState.go?s=1542:1654#L25">NextToken</a>
+					<a class="permalink" href="index.html#GenericSymbolState.NextToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#GenericSymbolState">GenericSymbolState</a>) NextToken(
+    scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>, tokenizer <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#ITokenizer">ITokenizer</a>) *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#Token">Token</a></pre>
+				<p>
+NextToken returns a symbol token from a scanner.
+</p>
+<pre>Returns: a symbol token from a scanner.
+</pre>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GenericTokenizer">type <a href="http://localhost:6060/src/tokenizers/generic/GenericTokenizer.go?s=155:217#L1">GenericTokenizer</a>
+				<a class="permalink" href="index.html#GenericTokenizer">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+GenericTokenizer implements a default tokenizer class.
+</p>
+
+			<pre>type GenericTokenizer struct {
+    <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#AbstractTokenizer">AbstractTokenizer</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewGenericTokenizer">func <a href="http://localhost:6060/src/tokenizers/generic/GenericTokenizer.go?s=219:263#L1">NewGenericTokenizer</a>
+					<a class="permalink" href="index.html#NewGenericTokenizer">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewGenericTokenizer() *<a href="index.html#GenericTokenizer">GenericTokenizer</a></pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="GenericWhitespaceState">type <a href="http://localhost:6060/src/tokenizers/generic/GenericWhitespaceState.go?s=452:522#L3">GenericWhitespaceState</a>
+				<a class="permalink" href="index.html#GenericWhitespaceState">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+GenericWhitespaceState a whitespace state ignores whitespace (such as blanks and tabs), and returns the tokenizer&#39;s
+next token. By default, all characters from 0 to 32 are whitespace.
+</p>
+
+			<pre>type GenericWhitespaceState struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewGenericWhitespaceState">func <a href="http://localhost:6060/src/tokenizers/generic/GenericWhitespaceState.go?s=648:704#L8">NewGenericWhitespaceState</a>
+					<a class="permalink" href="index.html#NewGenericWhitespaceState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewGenericWhitespaceState() *<a href="index.html#GenericWhitespaceState">GenericWhitespaceState</a></pre>
+				<p>
+NewGenericWhitespaceState constructs a whitespace state with a default idea of what characters are, in fact, whitespace.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="GenericWhitespaceState.ClearWhitespaceChars">func (*GenericWhitespaceState) <a href="http://localhost:6060/src/tokenizers/generic/GenericWhitespaceState.go?s=2054:2109#L52">ClearWhitespaceChars</a>
+					<a class="permalink" href="index.html#GenericWhitespaceState.ClearWhitespaceChars">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#GenericWhitespaceState">GenericWhitespaceState</a>) ClearWhitespaceChars()</pre>
+				<p>
+ClearWhitespaceChars clears definitions of whitespace characters.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GenericWhitespaceState.NextToken">func (*GenericWhitespaceState) <a href="http://localhost:6060/src/tokenizers/generic/GenericWhitespaceState.go?s=965:1081#L18">NextToken</a>
+					<a class="permalink" href="index.html#GenericWhitespaceState.NextToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#GenericWhitespaceState">GenericWhitespaceState</a>) NextToken(
+    scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>, tokenizer <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#ITokenizer">ITokenizer</a>) *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#Token">Token</a></pre>
+				<p>
+NextToken ignore whitespace (such as blanks and tabs), and return the tokenizer&#39;s next token.
+</p>
+<pre>Returns: the tokenizer&#39;s next token
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="GenericWhitespaceState.SetWhitespaceChars">func (*GenericWhitespaceState) <a href="http://localhost:6060/src/tokenizers/generic/GenericWhitespaceState.go?s=1764:1860#L43">SetWhitespaceChars</a>
+					<a class="permalink" href="index.html#GenericWhitespaceState.SetWhitespaceChars">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#GenericWhitespaceState">GenericWhitespaceState</a>) SetWhitespaceChars(fromSymbol <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>, toSymbol <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>, enable <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>)</pre>
+				<p>
+SetWhitespaceChars establish the given characters as whitespace to ignore.
+</p>
+<pre>Parameters:
+	- fromSymbol: First character index of the interval.
+	- toSymbol: Last character index of the interval.
+	- enable: &lt;code&gt;true&lt;/code&gt; if this state should ignore characters in the given range.
+</pre>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GenericWordState">type <a href="http://localhost:6060/src/tokenizers/generic/GenericWordState.go?s=1071:1135#L18">GenericWordState</a>
+				<a class="permalink" href="index.html#GenericWordState">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+GenericWordState a wordState returns a word from a scanner. Like other states, a tokenizer transfers the job
+of reading to this state, depending on an initial character. Thus, the tokenizer decides
+which characters may begin a word, and this state determines which characters may appear
+as a second or later character in a word. These are typically different sets of characters;
+in particular, it is typical for digits to appear as parts of a word, but not
+as the initial character of a word.
+&lt;p/&gt;
+By default, the following characters may appear in a word.
+The method &lt;code&gt;setWordChars()&lt;/code&gt; allows customizing this.
+&lt;blockquote&gt;&lt;pre&gt;
+From    To
+</p>
+<pre>&#39;a&#39;, &#39;z&#39;
+&#39;A&#39;, &#39;Z&#39;
+&#39;0&#39;, &#39;9&#39;
+
+ as well as: minus sign, underscore, and apostrophe.
+</pre>
+<p>
+&lt;/pre&gt;&lt;/blockquote&gt;
+</p>
+
+			<pre>type GenericWordState struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewGenericWordState">func <a href="http://localhost:6060/src/tokenizers/generic/GenericWordState.go?s=1292:1336#L24">NewGenericWordState</a>
+					<a class="permalink" href="index.html#NewGenericWordState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewGenericWordState() *<a href="index.html#GenericWordState">GenericWordState</a></pre>
+				<p>
+NewGenericWordState constructs a word state with a default idea of what characters
+are admissible inside a word (as described in the class comment).
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="GenericWordState.ClearWordChars">func (*GenericWordState) <a href="http://localhost:6060/src/tokenizers/generic/GenericWordState.go?s=3018:3061#L79">ClearWordChars</a>
+					<a class="permalink" href="index.html#GenericWordState.ClearWordChars">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#GenericWordState">GenericWordState</a>) ClearWordChars()</pre>
+				<p>
+ClearWordChars clears definitions of word chars.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GenericWordState.NextToken">func (*GenericWordState) <a href="http://localhost:6060/src/tokenizers/generic/GenericWordState.go?s=1819:1929#L43">NextToken</a>
+					<a class="permalink" href="index.html#GenericWordState.NextToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#GenericWordState">GenericWordState</a>) NextToken(
+    scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>, tokenizer <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#ITokenizer">ITokenizer</a>) *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#Token">Token</a></pre>
+				<p>
+NextToken ignore word (such as blanks and tabs), and return the tokenizer&#39;s next token.
+</p>
+<pre>Returns: the tokenizer&#39;s next token
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="GenericWordState.SetWordChars">func (*GenericWordState) <a href="http://localhost:6060/src/tokenizers/generic/GenericWordState.go?s=2757:2841#L70">SetWordChars</a>
+					<a class="permalink" href="index.html#GenericWordState.SetWordChars">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#GenericWordState">GenericWordState</a>) SetWordChars(fromSymbol <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>, toSymbol <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>, enable <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>)</pre>
+				<p>
+SetWordChars establish characters in the given range as valid characters for part of a word after
+the first character. Note that the tokenizer must determine which characters are valid
+as the beginning character of a word.
+</p>
+<pre>Parameters:
+	- fromSymbol: First character index of the interval.
+	- toSymbol: Last character index of the interval.
+	- enable: &lt;code&gt;true&lt;/code&gt; if this state should use characters in the given range.
+</pre>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SymbolNode">type <a href="http://localhost:6060/src/tokenizers/generic/SymbolNode.go?s=2091:2244#L22">SymbolNode</a>
+				<a class="permalink" href="index.html#SymbolNode">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+SymbolNode a &lt;code&gt;SymbolNode&lt;/code&gt; object is a member of a tree that contains all possible prefixes
+of allowable symbols. Multi-character symbols appear in a &lt;code&gt;SymbolNode&lt;/code&gt; tree
+with one node for each character.
+&lt;p/&gt;
+For example, the symbol &lt;code&gt;=:~&lt;/code&gt; will appear in a tree as three nodes. The first
+node contains an equals sign, and has a child; that child contains a colon and has a child;
+this third child contains a tilde, and has no children of its own. If the colon node had
+another child for a dollar sign character, then the tree would contain the symbol &lt;code&gt;=:$&lt;/code&gt;.
+&lt;p/&gt;
+A tree of &lt;code&gt;SymbolNode&lt;/code&gt; objects collaborate to read a (potentially multi-character)
+symbol from an input stream. A root node with no character of its own finds an initial node
+that represents the first character in the input. This node looks to see if the next character
+in the stream matches one of its children. If so, the node delegates its reading task to its child.
+This approach walks down the tree, pulling symbols from the input that match the path down the tree.
+&lt;p/&gt;
+When a node does not have a child that matches the next character, we will have read the longest
+possible symbol prefix. This prefix may or may not be a valid symbol.
+Consider a tree that has had &lt;code&gt;=:~&lt;/code&gt; added and has not had &lt;code&gt;=:&lt;/code&gt; added.
+In this tree, of the three nodes that contain &lt;code&gt;=:~&lt;/code&gt;, only the first and third contain
+complete symbols. If, say, the input contains &lt;code&gt;=:a&lt;/code&gt;, the colon node will not have
+a child that matches the &#39;a&#39; and so it will stop reading. The colon node has to &#34;unread&#34;: it must
+push back its character, and ask its parent to unread. Unreading continues until it reaches
+an ancestor that represents a valid symbol.
+</p>
+
+			<pre>type SymbolNode struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewSymbolNode">func <a href="http://localhost:6060/src/tokenizers/generic/SymbolNode.go?s=2443:2509#L35">NewSymbolNode</a>
+					<a class="permalink" href="index.html#NewSymbolNode">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewSymbolNode(parent *<a href="index.html#SymbolNode">SymbolNode</a>, character <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>) *<a href="index.html#SymbolNode">SymbolNode</a></pre>
+				<p>
+NewSymbolNode constructs a SymbolNode with the given parent, representing the given character.
+</p>
+<pre>Parameters:
+	- parent: This node&#39;s parent
+	- character: This node&#39;s associated character.
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="SymbolNode.AddDescendantLine">func (*SymbolNode) <a href="http://localhost:6060/src/tokenizers/generic/SymbolNode.go?s=3119:3186#L58">AddDescendantLine</a>
+					<a class="permalink" href="index.html#SymbolNode.AddDescendantLine">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SymbolNode">SymbolNode</a>) AddDescendantLine(value []<a href="http://localhost:6060/pkg/builtin/#rune">rune</a>, tokenType <a href="http://localhost:6060/pkg/builtin/#int">int</a>)</pre>
+				<p>
+AddDescendantLine add a line of descendants that represent the characters in the given string.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SymbolNode.Ancestry">func (*SymbolNode) <a href="http://localhost:6060/src/tokenizers/generic/SymbolNode.go?s=5384:5422#L137">Ancestry</a>
+					<a class="permalink" href="index.html#SymbolNode.Ancestry">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SymbolNode">SymbolNode</a>) Ancestry() []<a href="http://localhost:6060/pkg/builtin/#rune">rune</a></pre>
+				<p>
+Ancestry show the symbol this node represents.
+</p>
+<pre>Returns: the symbol this node represents
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SymbolNode.DeepestRead">func (*SymbolNode) <a href="http://localhost:6060/src/tokenizers/generic/SymbolNode.go?s=3461:3526#L69">DeepestRead</a>
+					<a class="permalink" href="index.html#SymbolNode.DeepestRead">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SymbolNode">SymbolNode</a>) DeepestRead(scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>) *<a href="index.html#SymbolNode">SymbolNode</a></pre>
+				<p>
+DeepestRead find the descendant that takes as many characters as possible from the input.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SymbolNode.EnsureChildWithChar">func (*SymbolNode) <a href="http://localhost:6060/src/tokenizers/generic/SymbolNode.go?s=2688:2752#L44">EnsureChildWithChar</a>
+					<a class="permalink" href="index.html#SymbolNode.EnsureChildWithChar">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SymbolNode">SymbolNode</a>) EnsureChildWithChar(value <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>) *<a href="index.html#SymbolNode">SymbolNode</a></pre>
+				<p>
+EnsureChildWithChar find or create a child for the given character.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SymbolNode.FindChildWithChar">func (*SymbolNode) <a href="http://localhost:6060/src/tokenizers/generic/SymbolNode.go?s=3844:3906#L85">FindChildWithChar</a>
+					<a class="permalink" href="index.html#SymbolNode.FindChildWithChar">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SymbolNode">SymbolNode</a>) FindChildWithChar(value <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>) *<a href="index.html#SymbolNode">SymbolNode</a></pre>
+				<p>
+FindChildWithChar find a child with the given character.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SymbolNode.SetTokenType">func (*SymbolNode) <a href="http://localhost:6060/src/tokenizers/generic/SymbolNode.go?s=5219:5263#L131">SetTokenType</a>
+					<a class="permalink" href="index.html#SymbolNode.SetTokenType">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SymbolNode">SymbolNode</a>) SetTokenType(value <a href="http://localhost:6060/pkg/builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SymbolNode.SetValid">func (*SymbolNode) <a href="http://localhost:6060/src/tokenizers/generic/SymbolNode.go?s=5093:5134#L123">SetValid</a>
+					<a class="permalink" href="index.html#SymbolNode.SetValid">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SymbolNode">SymbolNode</a>) SetValid(value <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SymbolNode.TokenType">func (*SymbolNode) <a href="http://localhost:6060/src/tokenizers/generic/SymbolNode.go?s=5157:5193#L127">TokenType</a>
+					<a class="permalink" href="index.html#SymbolNode.TokenType">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SymbolNode">SymbolNode</a>) TokenType() <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SymbolNode.UnreadToValid">func (*SymbolNode) <a href="http://localhost:6060/src/tokenizers/generic/SymbolNode.go?s=4680:4747#L107">UnreadToValid</a>
+					<a class="permalink" href="index.html#SymbolNode.UnreadToValid">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SymbolNode">SymbolNode</a>) UnreadToValid(scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>) *<a href="index.html#SymbolNode">SymbolNode</a></pre>
+				<p>
+UnreadToValid find a descendant which is down the path the given string indicates.
+</p>
+<pre>func (c *SymbolNode) FindDescendant(value []rune) *SymbolNode {
+   tempChar := CharValidator.Eof
+   if len(value) &gt; 0 {
+   tempChar = value[0]
+   }
+   childNode := c.FindChildWithChar(tempChar)
+   if !CharValidator.IsEof(tempChar) &amp;&amp; childNode != nil &amp;&amp; len(value) &gt; 1 {
+       childNode = childNode.FindDescendant(value[1:])
+   }
+   return childNode
+}
+</pre>
+<p>
+Unwind to a valid node; this node is &#34;valid&#34; if its ancestry represents a complete symbol.
+If this node is not valid, put back the character and ask the parent to unwind.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SymbolNode.Valid">func (*SymbolNode) <a href="http://localhost:6060/src/tokenizers/generic/SymbolNode.go?s=5038:5071#L119">Valid</a>
+					<a class="permalink" href="index.html#SymbolNode.Valid">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SymbolNode">SymbolNode</a>) Valid() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SymbolRootNode">type <a href="http://localhost:6060/src/tokenizers/generic/SymbolRootNode.go?s=364:406#L1">SymbolRootNode</a>
+				<a class="permalink" href="index.html#SymbolRootNode">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+SymbolRootNode this class is a special case of a &lt;code&gt;SymbolNode&lt;/code&gt;. A &lt;code&gt;SymbolRootNode&lt;/code&gt;
+object has no symbol of its own, but has children that represent all possible symbols.
+</p>
+
+			<pre>type SymbolRootNode struct {
+    <a href="index.html#SymbolNode">SymbolNode</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewSymbolRootNode">func <a href="http://localhost:6060/src/tokenizers/generic/SymbolRootNode.go?s=466:506#L5">NewSymbolRootNode</a>
+					<a class="permalink" href="index.html#NewSymbolRootNode">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewSymbolRootNode() *<a href="index.html#SymbolRootNode">SymbolRootNode</a></pre>
+				<p>
+NewSymbolRootNode creates and initializes a root node.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="SymbolRootNode.Add">func (*SymbolRootNode) <a href="http://localhost:6060/src/tokenizers/generic/SymbolRootNode.go?s=674:731#L14">Add</a>
+					<a class="permalink" href="index.html#SymbolRootNode.Add">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SymbolRootNode">SymbolRootNode</a>) Add(value <a href="http://localhost:6060/pkg/builtin/#string">string</a>, tokenType <a href="http://localhost:6060/pkg/builtin/#int">int</a>)</pre>
+				<p>
+Add the given string as a symbol.
+</p>
+<pre>Parameters:
+	- value: the character sequence to add.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SymbolRootNode.NextToken">func (*SymbolRootNode) <a href="http://localhost:6060/src/tokenizers/generic/SymbolRootNode.go?s=1274:1347#L35">NextToken</a>
+					<a class="permalink" href="index.html#SymbolRootNode.NextToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SymbolRootNode">SymbolRootNode</a>) NextToken(scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>) *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#Token">Token</a></pre>
+				<p>
+NextToken return a symbol string from a scanner.
+</p>
+<pre>Parameters:
+	- scanner: A scanner to read from
+	- firstChar: The first character of this symbol, already read from the scanner.
+Returns: A symbol string from a scanner
+</pre>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.18.2.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

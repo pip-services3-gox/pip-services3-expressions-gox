@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>functions - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.18.2";</script>
+<script src="../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package functions
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "calculator/functions"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#DefaultFunctionCollection">type DefaultFunctionCollection</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewDefaultFunctionCollection">func NewDefaultFunctionCollection() *DefaultFunctionCollection</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DelegatedFunction">type DelegatedFunction</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewDelegatedFunction">func NewDelegatedFunction(name string, calculator FunctionCalculator) *DelegatedFunction</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DelegatedFunction.Calculate">func (c *DelegatedFunction) Calculate(parameters []*variants.Variant, variantOperations variants.IVariantOperations) (*variants.Variant, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DelegatedFunction.Name">func (c *DelegatedFunction) Name() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#FunctionCalculator">type FunctionCalculator</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#FunctionCollection">type FunctionCollection</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewFunctionCollection">func NewFunctionCollection() *FunctionCollection</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FunctionCollection.Add">func (c *FunctionCollection) Add(function IFunction)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FunctionCollection.Clear">func (c *FunctionCollection) Clear()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FunctionCollection.FindByName">func (c *FunctionCollection) FindByName(name string) IFunction</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FunctionCollection.FindIndexByName">func (c *FunctionCollection) FindIndexByName(name string) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FunctionCollection.Get">func (c *FunctionCollection) Get(index int) IFunction</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FunctionCollection.GetAll">func (c *FunctionCollection) GetAll() []IFunction</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FunctionCollection.Length">func (c *FunctionCollection) Length() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FunctionCollection.Remove">func (c *FunctionCollection) Remove(index int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FunctionCollection.RemoveByName">func (c *FunctionCollection) RemoveByName(name string)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#IFunction">type IFunction</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#IFunctionCollection">type IFunctionCollection</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/calculator/functions/DefaultFunctionCollection.go">DefaultFunctionCollection.go</a>
+			
+				<a href="http://localhost:6060/src/calculator/functions/DelegatedFunction.go">DelegatedFunction.go</a>
+			
+				<a href="http://localhost:6060/src/calculator/functions/FunctionCollection.go">FunctionCollection.go</a>
+			
+				<a href="http://localhost:6060/src/calculator/functions/IFunction.go">IFunction.go</a>
+			
+				<a href="http://localhost:6060/src/calculator/functions/IFunctionCollection.go">IFunctionCollection.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="DefaultFunctionCollection">type <a href="http://localhost:6060/src/calculator/functions/DefaultFunctionCollection.go?s=313:374#L5">DefaultFunctionCollection</a>
+				<a class="permalink" href="index.html#DefaultFunctionCollection">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+DefaultFunctionCollection implements a list filled with standard functions.
+</p>
+
+			<pre>type DefaultFunctionCollection struct {
+    <a href="index.html#FunctionCollection">FunctionCollection</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewDefaultFunctionCollection">func <a href="http://localhost:6060/src/calculator/functions/DefaultFunctionCollection.go?s=471:533#L10">NewDefaultFunctionCollection</a>
+					<a class="permalink" href="index.html#NewDefaultFunctionCollection">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewDefaultFunctionCollection() *<a href="index.html#DefaultFunctionCollection">DefaultFunctionCollection</a></pre>
+				<p>
+NewDefaultFunctionCollection constructs this list and fills it with the standard functions.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="DelegatedFunction">type <a href="http://localhost:6060/src/calculator/functions/DelegatedFunction.go?s=656:739#L9">DelegatedFunction</a>
+				<a class="permalink" href="index.html#DelegatedFunction">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+Defines an interface for expression function.
+</p>
+
+			<pre>type DelegatedFunction struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewDelegatedFunction">func <a href="http://localhost:6060/src/calculator/functions/DelegatedFunction.go?s=913:1001#L19">NewDelegatedFunction</a>
+					<a class="permalink" href="index.html#NewDelegatedFunction">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewDelegatedFunction(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>, calculator <a href="index.html#FunctionCalculator">FunctionCalculator</a>) *<a href="index.html#DelegatedFunction">DelegatedFunction</a></pre>
+				<p>
+Constructs this function class with specified parameters.
+</p>
+<p>
+Parameters:
+</p>
+<pre>- name: The name of this function.
+- calculator: The function calculator delegate.
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="DelegatedFunction.Calculate">func (*DelegatedFunction) <a href="http://localhost:6060/src/calculator/functions/DelegatedFunction.go?s=1517:1661#L45">Calculate</a>
+					<a class="permalink" href="index.html#DelegatedFunction.Calculate">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DelegatedFunction">DelegatedFunction</a>) Calculate(parameters []*<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#Variant">Variant</a>,
+    variantOperations <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#IVariantOperations">IVariantOperations</a>) (*<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#Variant">Variant</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+The function calculation method.
+</p>
+<p>
+Parameters:
+</p>
+<pre>- parameters: A list with function parameters.
+- variantOperations: Variants operations manager.
+</pre>
+<p>
+Returns: A calculated function result.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DelegatedFunction.Name">func (*DelegatedFunction) <a href="http://localhost:6060/src/calculator/functions/DelegatedFunction.go?s=1252:1293#L35">Name</a>
+					<a class="permalink" href="index.html#DelegatedFunction.Name">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DelegatedFunction">DelegatedFunction</a>) Name() <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+				<p>
+The function name.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="FunctionCalculator">type <a href="http://localhost:6060/src/calculator/functions/DelegatedFunction.go?s=470:605#L5">FunctionCalculator</a>
+				<a class="permalink" href="index.html#FunctionCalculator">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+Defines a delegate to implement a function
+</p>
+<p>
+Parameters:
+</p>
+<pre>- parameters: A list with function parameters
+- variantOperations: A manager for variant operations.
+</pre>
+<p>
+Returns: A calculated function value.
+</p>
+
+			<pre>type FunctionCalculator func(parameters []*<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#Variant">Variant</a>,
+    variantOperations <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#IVariantOperations">IVariantOperations</a>) (*<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#Variant">Variant</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="FunctionCollection">type <a href="http://localhost:6060/src/calculator/functions/FunctionCollection.go?s=88:145#L1">FunctionCollection</a>
+				<a class="permalink" href="index.html#FunctionCollection">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+FunctionCollection implements a functions list.
+</p>
+
+			<pre>type FunctionCollection struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewFunctionCollection">func <a href="http://localhost:6060/src/calculator/functions/FunctionCollection.go?s=147:195#L1">NewFunctionCollection</a>
+					<a class="permalink" href="index.html#NewFunctionCollection">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewFunctionCollection() *<a href="index.html#FunctionCollection">FunctionCollection</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="FunctionCollection.Add">func (*FunctionCollection) <a href="http://localhost:6060/src/calculator/functions/FunctionCollection.go?s=365:417#L10">Add</a>
+					<a class="permalink" href="index.html#FunctionCollection.Add">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#FunctionCollection">FunctionCollection</a>) Add(function <a href="index.html#IFunction">IFunction</a>)</pre>
+				<p>
+Add a new function to the collection.
+</p>
+<pre>Parameters:
+	- function: a function to be added.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="FunctionCollection.Clear">func (*FunctionCollection) <a href="http://localhost:6060/src/calculator/functions/FunctionCollection.go?s=2358:2394#L82">Clear</a>
+					<a class="permalink" href="index.html#FunctionCollection.Clear">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#FunctionCollection">FunctionCollection</a>) Clear()</pre>
+				<p>
+Clear the collection.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FunctionCollection.FindByName">func (*FunctionCollection) <a href="http://localhost:6060/src/calculator/functions/FunctionCollection.go?s=1665:1727#L56">FindByName</a>
+					<a class="permalink" href="index.html#FunctionCollection.FindByName">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#FunctionCollection">FunctionCollection</a>) FindByName(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="index.html#IFunction">IFunction</a></pre>
+				<p>
+FindByName finds function in the list by it&#39;s name.
+</p>
+<pre>Parameters:
+	- name: The function name to be found.
+Returns: Function or &lt;code&gt;null&lt;/code&gt; if function was not found.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="FunctionCollection.FindIndexByName">func (*FunctionCollection) <a href="http://localhost:6060/src/calculator/functions/FunctionCollection.go?s=1282:1343#L42">FindIndexByName</a>
+					<a class="permalink" href="index.html#FunctionCollection.FindIndexByName">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#FunctionCollection">FunctionCollection</a>) FindIndexByName(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+FindIndexByName function index in the list by it&#39;s name.
+</p>
+<pre>Parameters:
+	- name: The function name to be found.
+Returns: Function index in the list or &lt;code&gt;-1&lt;/code&gt; if function was not found.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="FunctionCollection.Get">func (*FunctionCollection) <a href="http://localhost:6060/src/calculator/functions/FunctionCollection.go?s=773:826#L26">Get</a>
+					<a class="permalink" href="index.html#FunctionCollection.Get">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#FunctionCollection">FunctionCollection</a>) Get(index <a href="http://localhost:6060/pkg/builtin/#int">int</a>) <a href="index.html#IFunction">IFunction</a></pre>
+				<p>
+Get a function by its index.
+</p>
+<pre>Parameters:
+	- index: a function index.
+Returns: a retrieved function.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="FunctionCollection.GetAll">func (*FunctionCollection) <a href="http://localhost:6060/src/calculator/functions/FunctionCollection.go?s=943:992#L32">GetAll</a>
+					<a class="permalink" href="index.html#FunctionCollection.GetAll">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#FunctionCollection">FunctionCollection</a>) GetAll() []<a href="index.html#IFunction">IFunction</a></pre>
+				<p>
+GetAll all functions stores in the collection
+</p>
+<pre>Returns: a list with functions.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="FunctionCollection.Length">func (*FunctionCollection) <a href="http://localhost:6060/src/calculator/functions/FunctionCollection.go?s=589:630#L18">Length</a>
+					<a class="permalink" href="index.html#FunctionCollection.Length">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#FunctionCollection">FunctionCollection</a>) Length() <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+Length is a number of functions stored in the collection.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FunctionCollection.Remove">func (*FunctionCollection) <a href="http://localhost:6060/src/calculator/functions/FunctionCollection.go?s=1929:1975#L67">Remove</a>
+					<a class="permalink" href="index.html#FunctionCollection.Remove">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#FunctionCollection">FunctionCollection</a>) Remove(index <a href="http://localhost:6060/pkg/builtin/#int">int</a>)</pre>
+				<p>
+Remove a function by its index.
+</p>
+<pre>Parameters:
+	- index: a index of the function to be removed.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="FunctionCollection.RemoveByName">func (*FunctionCollection) <a href="http://localhost:6060/src/calculator/functions/FunctionCollection.go?s=2149:2203#L74">RemoveByName</a>
+					<a class="permalink" href="index.html#FunctionCollection.RemoveByName">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#FunctionCollection">FunctionCollection</a>) RemoveByName(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>)</pre>
+				<p>
+RemoveByName function by it&#39;s name.
+</p>
+<pre>Parameters:
+	- name: The function name to be removed.
+</pre>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="IFunction">type <a href="http://localhost:6060/src/calculator/functions/IFunction.go?s=171:532#L1">IFunction</a>
+				<a class="permalink" href="index.html#IFunction">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+IFunction вefines an interface for expression function.
+&lt;/summary&gt;
+</p>
+
+			<pre>type IFunction interface {
+    <span class="comment">// Name The function name.</span>
+    Name() <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+
+    <span class="comment">// Calculate the function calculation method.</span>
+    <span class="comment">// Parameters:</span>
+    <span class="comment">//		- parameters: A list with function parameters&lt;</span>
+    <span class="comment">//		- variantOperations: Variants operations manager.</span>
+    Calculate(parameters []*<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#Variant">Variant</a>,
+        variantOperations <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#IVariantOperations">IVariantOperations</a>) (*<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/">variants</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/variants/#Variant">Variant</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IFunctionCollection">type <a href="http://localhost:6060/src/calculator/functions/IFunctionCollection.go?s=68:1304#L1">IFunctionCollection</a>
+				<a class="permalink" href="index.html#IFunctionCollection">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+IFunctionCollection defines a functions list.
+</p>
+
+			<pre>type IFunctionCollection interface {
+    <span class="comment">// Add a new function to the collection.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- function: a function to be added.</span>
+    Add(function <a href="index.html#IFunction">IFunction</a>)
+
+    <span class="comment">// Length is a number of functions stored in the collection.</span>
+    Length() <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+
+    <span class="comment">// Get a function by its index.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- index: a function index.</span>
+    <span class="comment">//	Returns: a retrieved function.</span>
+    Get(index <a href="http://localhost:6060/pkg/builtin/#int">int</a>) <a href="index.html#IFunction">IFunction</a>
+
+    <span class="comment">// GetAll functions stores in the collection</span>
+    <span class="comment">//	Returns: a list with functions.</span>
+    GetAll() []<a href="index.html#IFunction">IFunction</a>
+
+    <span class="comment">// FindIndexByName function index in the list by it&#39;s name.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- name: The function name to be found.</span>
+    <span class="comment">//	Returns: Function index in the list or &lt;code&gt;-1&lt;/code&gt; if function was not found.</span>
+    FindIndexByName(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+
+    <span class="comment">// FindByName function in the list by it&#39;s name.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- name: The function name to be found.</span>
+    <span class="comment">//	Returns: Function or &lt;code&gt;null&lt;/code&gt; if function was not found.</span>
+    FindByName(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="index.html#IFunction">IFunction</a>
+
+    <span class="comment">// Remove a function by its index.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- index: a index of the function to be removed.</span>
+    Remove(index <a href="http://localhost:6060/pkg/builtin/#int">int</a>)
+
+    <span class="comment">// RemoveByName function by it&#39;s name.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- name: The function name to be removed.</span>
+    RemoveByName(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>)
+
+    <span class="comment">// Clear the collection.</span>
+    Clear()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.18.2.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

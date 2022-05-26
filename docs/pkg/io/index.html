@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>io - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.18.2";</script>
+<script src="../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package io
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "io"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#IScanner">type IScanner</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#StringScanner">type StringScanner</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewStringScanner">func NewStringScanner(content string) *StringScanner</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#StringScanner.Column">func (c *StringScanner) Column() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#StringScanner.Line">func (c *StringScanner) Line() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#StringScanner.Peek">func (c *StringScanner) Peek() rune</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#StringScanner.PeekColumn">func (c *StringScanner) PeekColumn() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#StringScanner.PeekLine">func (c *StringScanner) PeekLine() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#StringScanner.Read">func (c *StringScanner) Read() rune</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#StringScanner.Reset">func (c *StringScanner) Reset()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#StringScanner.Unread">func (c *StringScanner) Unread()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#StringScanner.UnreadMany">func (c *StringScanner) UnreadMany(count int)</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/io/IScanner.go">IScanner.go</a>
+			
+				<a href="http://localhost:6060/src/io/StringScanner.go">StringScanner.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="IScanner">type <a href="http://localhost:6060/src/io/IScanner.go?s=155:1304#L1">IScanner</a>
+				<a class="permalink" href="index.html#IScanner">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+IScanner defines scanned with ability to unread characters and count lines.
+This scanner is used by tokenizers to process input streams.
+</p>
+
+			<pre>type IScanner interface {
+    <span class="comment">// Read character from the top of the stream.</span>
+    <span class="comment">//	Returns: a read character or &lt;code&gt;-1&lt;/code&gt; if stream processed to the end.&lt;/returns&gt;</span>
+    Read() <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>
+
+    <span class="comment">// Line gets the current line number</span>
+    <span class="comment">//	Returns: the current line number in the stream</span>
+    Line() <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+
+    <span class="comment">// Column gets the column in the current line</span>
+    <span class="comment">//	Returns: the column in the current line in the stream</span>
+    Column() <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+
+    <span class="comment">// Peek returns the character from the top of the stream without moving the stream pointer.</span>
+    <span class="comment">//	Returns: a character from the top of the stream or &lt;code&gt;-1&lt;/code&gt; if stream is empty.&lt;/returns&gt;</span>
+    Peek() <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>
+
+    <span class="comment">// PeekLine gets the next character line number</span>
+    <span class="comment">//	Returns: the next character line number in the stream</span>
+    PeekLine() <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+
+    <span class="comment">// PeekColumn gets the next character column</span>
+    <span class="comment">//	Returns the next character column in the stream</span>
+    PeekColumn() <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+
+    <span class="comment">// Unread puts the specified character to the top of the stream.</span>
+    Unread()
+
+    <span class="comment">// UnreadMany puts the specified number of characters to the top of the stream.</span>
+    <span class="comment">//	Parameters:</span>
+    <span class="comment">//		- count: A number of characters to be unread</span>
+    UnreadMany(count <a href="http://localhost:6060/pkg/builtin/#int">int</a>)
+
+    <span class="comment">// Reset scanner to the initial position</span>
+    Reset()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="StringScanner">type <a href="http://localhost:6060/src/io/StringScanner.go?s=141:229#L1">StringScanner</a>
+				<a class="permalink" href="index.html#StringScanner">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+StringScanner scan characters in a string that allows tokenizers
+to look ahead through stream to perform lexical analysis.
+</p>
+
+			<pre>type StringScanner struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewStringScanner">func <a href="http://localhost:6060/src/io/StringScanner.go?s=339:391#L5">NewStringScanner</a>
+					<a class="permalink" href="index.html#NewStringScanner">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewStringScanner(content <a href="http://localhost:6060/pkg/builtin/#string">string</a>) *<a href="index.html#StringScanner">StringScanner</a></pre>
+				<p>
+NewStringScanner creates an instance of this class.
+</p>
+<pre>Parameters:
+	content a text content to be read
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="StringScanner.Column">func (*StringScanner) <a href="http://localhost:6060/src/io/StringScanner.go?s=2621:2657#L93">Column</a>
+					<a class="permalink" href="index.html#StringScanner.Column">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#StringScanner">StringScanner</a>) Column() <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+Column gets the column in the current line
+</p>
+<pre>Returns: the column in the current line in the stream
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="StringScanner.Line">func (*StringScanner) <a href="http://localhost:6060/src/io/StringScanner.go?s=2463:2497#L87">Line</a>
+					<a class="permalink" href="index.html#StringScanner.Line">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#StringScanner">StringScanner</a>) Line() <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+Line gets the current line number
+</p>
+<pre>Returns: the current line number in the stream
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="StringScanner.Peek">func (*StringScanner) <a href="http://localhost:6060/src/io/StringScanner.go?s=2872:2907#L99">Peek</a>
+					<a class="permalink" href="index.html#StringScanner.Peek">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#StringScanner">StringScanner</a>) Peek() <a href="http://localhost:6060/pkg/builtin/#rune">rune</a></pre>
+				<p>
+Peek returns the character from the top of the stream without moving the stream pointer.
+</p>
+<pre>Returns: a character from the top of the stream or &lt;code&gt;-1&lt;/code&gt; if stream is empty.&lt;/returns&gt;
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="StringScanner.PeekColumn">func (*StringScanner) <a href="http://localhost:6060/src/io/StringScanner.go?s=3388:3428#L118">PeekColumn</a>
+					<a class="permalink" href="index.html#StringScanner.PeekColumn">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#StringScanner">StringScanner</a>) PeekColumn() <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+PeekColumn gets the next character column
+</p>
+<pre>Returns: the next character column in the stream
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="StringScanner.PeekLine">func (*StringScanner) <a href="http://localhost:6060/src/io/StringScanner.go?s=3051:3089#L105">PeekLine</a>
+					<a class="permalink" href="index.html#StringScanner.PeekLine">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#StringScanner">StringScanner</a>) PeekLine() <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+PeekLine gets the next character line number
+</p>
+<pre>Returns: the next character line number in the stream
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="StringScanner.Read">func (*StringScanner) <a href="http://localhost:6060/src/io/StringScanner.go?s=1879:1914#L56">Read</a>
+					<a class="permalink" href="index.html#StringScanner.Read">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#StringScanner">StringScanner</a>) Read() <a href="http://localhost:6060/pkg/builtin/#rune">rune</a></pre>
+				<p>
+Read character from the top of the stream.
+</p>
+<pre>ReturnsЖ a read character or &lt;code&gt;-1&lt;/code&gt; if stream processed to the end.&lt;/returns&gt;
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="StringScanner.Reset">func (*StringScanner) <a href="http://localhost:6060/src/io/StringScanner.go?s=4666:4697#L183">Reset</a>
+					<a class="permalink" href="index.html#StringScanner.Reset">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#StringScanner">StringScanner</a>) Reset()</pre>
+				<p>
+Reset scanner to the initial position
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringScanner.Unread">func (*StringScanner) <a href="http://localhost:6060/src/io/StringScanner.go?s=3739:3771#L134">Unread</a>
+					<a class="permalink" href="index.html#StringScanner.Unread">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#StringScanner">StringScanner</a>) Unread()</pre>
+				<p>
+Unread puts the specified character to the top of the stream.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringScanner.UnreadMany">func (*StringScanner) <a href="http://localhost:6060/src/io/StringScanner.go?s=4531:4576#L175">UnreadMany</a>
+					<a class="permalink" href="index.html#StringScanner.UnreadMany">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#StringScanner">StringScanner</a>) UnreadMany(count <a href="http://localhost:6060/pkg/builtin/#int">int</a>)</pre>
+				<p>
+UnreadMany puts the specified number of characters to the top of the stream.
+</p>
+<pre>Parameters:
+	- count A number of characters to be unread
+</pre>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.18.2.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

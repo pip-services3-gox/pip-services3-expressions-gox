@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>tokenizers - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.18.2";</script>
+<script src="../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package tokenizers
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "calculator/tokenizers"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#ExpressionNumberState">type ExpressionNumberState</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewExpressionNumberState">func NewExpressionNumberState() *ExpressionNumberState</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionNumberState.NextToken">func (c *ExpressionNumberState) NextToken(scanner io.IScanner, tokenizer tokenizers.ITokenizer) *tokenizers.Token</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ExpressionQuoteState">type ExpressionQuoteState</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewExpressionQuoteState">func NewExpressionQuoteState() *ExpressionQuoteState</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionQuoteState.DecodeString">func (c *ExpressionQuoteState) DecodeString(value string, quoteSymbol rune) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionQuoteState.EncodeString">func (c *ExpressionQuoteState) EncodeString(value string, quoteSymbol rune) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionQuoteState.NextToken">func (c *ExpressionQuoteState) NextToken(scanner io.IScanner, tokenizer tokenizers.ITokenizer) *tokenizers.Token</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ExpressionSymbolState">type ExpressionSymbolState</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewExpressionSymbolState">func NewExpressionSymbolState() *ExpressionSymbolState</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ExpressionTokenizer">type ExpressionTokenizer</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewExpressionTokenizer">func NewExpressionTokenizer() *ExpressionTokenizer</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ExpressionWordState">type ExpressionWordState</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewExpressionWordState">func NewExpressionWordState() *ExpressionWordState</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ExpressionWordState.NextToken">func (c *ExpressionWordState) NextToken(scanner io.IScanner, tokenizer tokenizers.ITokenizer) *tokenizers.Token</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/calculator/tokenizers/ExpressionNumberState.go">ExpressionNumberState.go</a>
+			
+				<a href="http://localhost:6060/src/calculator/tokenizers/ExpressionQuoteState.go">ExpressionQuoteState.go</a>
+			
+				<a href="http://localhost:6060/src/calculator/tokenizers/ExpressionSymbolState.go">ExpressionSymbolState.go</a>
+			
+				<a href="http://localhost:6060/src/calculator/tokenizers/ExpressionTokenizer.go">ExpressionTokenizer.go</a>
+			
+				<a href="http://localhost:6060/src/calculator/tokenizers/ExpressionWordState.go">ExpressionWordState.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>
+Keywords supported expression keywords.
+</p>
+
+				<pre>var <span id="Keywords">Keywords</span> []<a href="http://localhost:6060/pkg/builtin/#string">string</a> = []<a href="http://localhost:6060/pkg/builtin/#string">string</a>{
+    &#34;AND&#34;, &#34;OR&#34;, &#34;NOT&#34;, &#34;XOR&#34;, &#34;LIKE&#34;, &#34;IS&#34;, &#34;IN&#34;, &#34;NULL&#34;, &#34;TRUE&#34;, &#34;FALSE&#34;,
+}</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="ExpressionNumberState">type <a href="http://localhost:6060/src/calculator/tokenizers/ExpressionNumberState.go?s=426:491#L3">ExpressionNumberState</a>
+				<a class="permalink" href="index.html#ExpressionNumberState">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+ExpressionNumberState implements an Expression-specific number state object.
+</p>
+
+			<pre>type ExpressionNumberState struct {
+    <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/generic/">generic</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/generic/#GenericNumberState">GenericNumberState</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewExpressionNumberState">func <a href="http://localhost:6060/src/calculator/tokenizers/ExpressionNumberState.go?s=493:547#L7">NewExpressionNumberState</a>
+					<a class="permalink" href="index.html#NewExpressionNumberState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewExpressionNumberState() *<a href="index.html#ExpressionNumberState">ExpressionNumberState</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="ExpressionNumberState.NextToken">func (*ExpressionNumberState) <a href="http://localhost:6060/src/calculator/tokenizers/ExpressionNumberState.go?s=931:1045#L19">NextToken</a>
+					<a class="permalink" href="index.html#ExpressionNumberState.NextToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionNumberState">ExpressionNumberState</a>) NextToken(scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>,
+    tokenizer <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#ITokenizer">ITokenizer</a>) *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#Token">Token</a></pre>
+				<p>
+NextToken gets the next token from the stream started from the character linked to this state.
+</p>
+<pre>Parameters:
+	- scanner: A textual string to be tokenized.
+	- tokenizer: A tokenizer class that controls the process.
+Returns: The next token from the top of the stream.
+</pre>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ExpressionQuoteState">type <a href="http://localhost:6060/src/calculator/tokenizers/ExpressionQuoteState.go?s=350:386#L2">ExpressionQuoteState</a>
+				<a class="permalink" href="index.html#ExpressionQuoteState">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+ExpressionQuoteState implements an Expression-specific quote string state object.
+</p>
+
+			<pre>type ExpressionQuoteState struct {
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewExpressionQuoteState">func <a href="http://localhost:6060/src/calculator/tokenizers/ExpressionQuoteState.go?s=388:440#L5">NewExpressionQuoteState</a>
+					<a class="permalink" href="index.html#NewExpressionQuoteState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewExpressionQuoteState() *<a href="index.html#ExpressionQuoteState">ExpressionQuoteState</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="ExpressionQuoteState.DecodeString">func (*ExpressionQuoteState) <a href="http://localhost:6060/src/calculator/tokenizers/ExpressionQuoteState.go?s=2208:2290#L68">DecodeString</a>
+					<a class="permalink" href="index.html#ExpressionQuoteState.DecodeString">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionQuoteState">ExpressionQuoteState</a>) DecodeString(value <a href="http://localhost:6060/pkg/builtin/#string">string</a>, quoteSymbol <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>) <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+				<p>
+DecodeString decodes a string value.
+</p>
+<pre>Parameters:
+	- value: A string value to be decoded.
+	- quoteChar: A string quote character.
+Returns: An decoded string.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpressionQuoteState.EncodeString">func (*ExpressionQuoteState) <a href="http://localhost:6060/src/calculator/tokenizers/ExpressionQuoteState.go?s=1712:1794#L54">EncodeString</a>
+					<a class="permalink" href="index.html#ExpressionQuoteState.EncodeString">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionQuoteState">ExpressionQuoteState</a>) EncodeString(value <a href="http://localhost:6060/pkg/builtin/#string">string</a>, quoteSymbol <a href="http://localhost:6060/pkg/builtin/#rune">rune</a>) <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+				<p>
+EncodeString encodes a string value.
+</p>
+<pre>Parameters:
+	- value: A string value to be encoded.
+	- quoteSymbol: A string quote character.
+Returns: An encoded string.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpressionQuoteState.NextToken">func (*ExpressionQuoteState) <a href="http://localhost:6060/src/calculator/tokenizers/ExpressionQuoteState.go?s=765:878#L15">NextToken</a>
+					<a class="permalink" href="index.html#ExpressionQuoteState.NextToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionQuoteState">ExpressionQuoteState</a>) NextToken(scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>,
+    tokenizer <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#ITokenizer">ITokenizer</a>) *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#Token">Token</a></pre>
+				<p>
+NextToken gets the next token from the stream started from the character linked to this state.
+</p>
+<pre>Parameters:
+	- scanner: A textual string to be tokenized.
+	- tokenizer: A tokenizer class that controls the process.
+Returns: The next token from the top of the stream.
+</pre>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ExpressionSymbolState">type <a href="http://localhost:6060/src/calculator/tokenizers/ExpressionSymbolState.go?s=245:310#L1">ExpressionSymbolState</a>
+				<a class="permalink" href="index.html#ExpressionSymbolState">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+ExpressionSymbolState implements a symbol state object.
+</p>
+
+			<pre>type ExpressionSymbolState struct {
+    <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/generic/">generic</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/generic/#GenericSymbolState">GenericSymbolState</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewExpressionSymbolState">func <a href="http://localhost:6060/src/calculator/tokenizers/ExpressionSymbolState.go?s=378:432#L4">NewExpressionSymbolState</a>
+					<a class="permalink" href="index.html#NewExpressionSymbolState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewExpressionSymbolState() *<a href="index.html#ExpressionSymbolState">ExpressionSymbolState</a></pre>
+				<p>
+NewExpressionSymbolState constructs an instance of this class.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="ExpressionTokenizer">type <a href="http://localhost:6060/src/calculator/tokenizers/ExpressionTokenizer.go?s=277:342#L1">ExpressionTokenizer</a>
+				<a class="permalink" href="index.html#ExpressionTokenizer">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+ExpressionTokenizer implements a tokenizer to perform lexical analysis for expressions.
+</p>
+
+			<pre>type ExpressionTokenizer struct {
+    <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#AbstractTokenizer">AbstractTokenizer</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewExpressionTokenizer">func <a href="http://localhost:6060/src/calculator/tokenizers/ExpressionTokenizer.go?s=344:394#L3">NewExpressionTokenizer</a>
+					<a class="permalink" href="index.html#NewExpressionTokenizer">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewExpressionTokenizer() *<a href="index.html#ExpressionTokenizer">ExpressionTokenizer</a></pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="ExpressionWordState">type <a href="http://localhost:6060/src/calculator/tokenizers/ExpressionWordState.go?s=318:379#L2">ExpressionWordState</a>
+				<a class="permalink" href="index.html#ExpressionWordState">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+ExpressionWordState implements a word state object.
+</p>
+
+			<pre>type ExpressionWordState struct {
+    <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/generic/">generic</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/generic/#GenericWordState">GenericWordState</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewExpressionWordState">func <a href="http://localhost:6060/src/calculator/tokenizers/ExpressionWordState.go?s=598:648#L12">NewExpressionWordState</a>
+					<a class="permalink" href="index.html#NewExpressionWordState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewExpressionWordState() *<a href="index.html#ExpressionWordState">ExpressionWordState</a></pre>
+				<p>
+NewExpressionWordState constructs an instance of this class.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="ExpressionWordState.NextToken">func (*ExpressionWordState) <a href="http://localhost:6060/src/calculator/tokenizers/ExpressionWordState.go?s=1252:1364#L33">NextToken</a>
+					<a class="permalink" href="index.html#ExpressionWordState.NextToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ExpressionWordState">ExpressionWordState</a>) NextToken(scanner <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/">io</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/io/#IScanner">IScanner</a>,
+    tokenizer <a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#ITokenizer">ITokenizer</a>) *<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/">tokenizers</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/#Token">Token</a></pre>
+				<p>
+NextToken gets the next token from the stream started from the character linked to this state.
+</p>
+<pre>Parameters:
+	- scanner: A textual string to be tokenized.
+	- tokenizer: A tokenizer class that controls the process.
+Returns: The next token from the top of the stream.
+</pre>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.18.2.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>
