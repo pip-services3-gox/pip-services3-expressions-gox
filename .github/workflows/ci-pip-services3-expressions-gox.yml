@@ -1,4 +1,4 @@
-name: Pip.Services Expressions toolkit in Go
+name: Pip.Services Expressions toolkit in Gox
 
 on: 
   push:
