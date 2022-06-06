@@ -2,7 +2,6 @@
 
 # Recreate image names using the data in the "component.json" file
 $component = Get-Content -Path "component.json" | ConvertFrom-Json
-$buildImage="$($component.registry)/$($component.name):$($component.version)-$($component.build)-build"
 $docsImage="$($component.registry)/$($component.name):$($component.version)-$($component.build)-docs"
 $testImage="$($component.registry)/$($component.name):$($component.version)-$($component.build)-test"
 
@@ -10,7 +9,6 @@ $testImage="$($component.registry)/$($component.name):$($component.version)-$($c
 Get-ChildItem -Path "." -Include "exe" -Recurse | foreach($_) { Remove-Item -Force -Recurse $_.FullName }
 
 # Remove docker images
-docker rmi $buildImage --force
 docker rmi $docsImage --force
 docker rmi $testImage --force
 docker image prune --force
