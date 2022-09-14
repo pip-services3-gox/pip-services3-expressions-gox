@@ -4,12 +4,12 @@ import "github.com/pip-services3-gox/pip-services3-commons-gox/errors"
 
 // TypeSafeVariantOperations implements a strongly typed (type safe) variant operations manager object.
 type TypeSafeVariantOperations struct {
-	AbstractVariantOperations
+	*AbstractVariantOperations
 }
 
 func NewTypeSafeVariantOperations() *TypeSafeVariantOperations {
 	c := &TypeSafeVariantOperations{}
-	c.AbstractVariantOperations = *InheritAbstractVariantOperations(c)
+	c.AbstractVariantOperations = InheritAbstractVariantOperations(c)
 	return c
 }
 

@@ -6,7 +6,7 @@ import (
 )
 
 type MustacheTokenizer struct {
-	tokenizers.AbstractTokenizer
+	*tokenizers.AbstractTokenizer
 	special      bool
 	specialState tokenizers.ITokenizerState
 }
@@ -15,7 +15,7 @@ func NewMustacheTokenizer() *MustacheTokenizer {
 	c := &MustacheTokenizer{
 		special: true,
 	}
-	c.AbstractTokenizer = *tokenizers.InheritAbstractTokenizer(c)
+	c.AbstractTokenizer = tokenizers.InheritAbstractTokenizer(c)
 
 	c.SetSymbolState(generic.NewGenericSymbolState())
 	c.SymbolState().Add("{{", tokenizers.Symbol)

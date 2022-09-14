@@ -8,13 +8,13 @@ import (
 
 // CsvSymbolState implements a symbol state to tokenize delimiters in CSV streams.
 type CsvSymbolState struct {
-	generic.GenericSymbolState
+	*generic.GenericSymbolState
 }
 
 // NewCsvSymbolState constructs this object with specified parameters.
 func NewCsvSymbolState() *CsvSymbolState {
 	c := &CsvSymbolState{
-		GenericSymbolState: *generic.NewGenericSymbolState(),
+		GenericSymbolState: generic.NewGenericSymbolState(),
 	}
 
 	c.Add("\n", tokenizers.Eol)

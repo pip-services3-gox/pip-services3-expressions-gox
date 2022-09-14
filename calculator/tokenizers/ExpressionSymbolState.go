@@ -7,13 +7,13 @@ import (
 
 // ExpressionSymbolState implements a symbol state object.
 type ExpressionSymbolState struct {
-	generic.GenericSymbolState
+	*generic.GenericSymbolState
 }
 
 // NewExpressionSymbolState constructs an instance of this class.
 func NewExpressionSymbolState() *ExpressionSymbolState {
 	c := &ExpressionSymbolState{
-		GenericSymbolState: *generic.NewGenericSymbolState(),
+		GenericSymbolState: generic.NewGenericSymbolState(),
 	}
 
 	c.Add("<=", tokenizers.Symbol)

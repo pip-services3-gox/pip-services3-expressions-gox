@@ -4,7 +4,7 @@ import "github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers/ge
 
 // CsvWordState implements a word state to tokenize CSV stream.
 type CsvWordState struct {
-	generic.GenericWordState
+	*generic.GenericWordState
 }
 
 // NewCsvWordState constructs this object with specified parameters.
@@ -13,7 +13,7 @@ type CsvWordState struct {
 //		- quoteSymbol: Delimiters character to quote strings.
 func NewCsvWordState(fieldSeparators []rune, quoteSymbols []rune) *CsvWordState {
 	c := &CsvWordState{
-		GenericWordState: *generic.NewGenericWordState(),
+		GenericWordState: generic.NewGenericWordState(),
 	}
 
 	c.ClearWordChars()

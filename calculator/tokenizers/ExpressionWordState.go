@@ -10,7 +10,7 @@ import (
 
 // ExpressionWordState implements a word state object.
 type ExpressionWordState struct {
-	generic.GenericWordState
+	*generic.GenericWordState
 }
 
 // Keywords supported expression keywords.
@@ -21,7 +21,7 @@ var Keywords []string = []string{
 // NewExpressionWordState constructs an instance of this class.
 func NewExpressionWordState() *ExpressionWordState {
 	c := &ExpressionWordState{
-		GenericWordState: *generic.NewGenericWordState(),
+		GenericWordState: generic.NewGenericWordState(),
 	}
 
 	c.ClearWordChars()

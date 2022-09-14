@@ -4,12 +4,12 @@ import "github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers"
 
 // GenericTokenizer implements a default tokenizer class.
 type GenericTokenizer struct {
-	tokenizers.AbstractTokenizer
+	*tokenizers.AbstractTokenizer
 }
 
 func NewGenericTokenizer() *GenericTokenizer {
 	c := &GenericTokenizer{}
-	c.AbstractTokenizer = *tokenizers.InheritAbstractTokenizer(c)
+	c.AbstractTokenizer = tokenizers.InheritAbstractTokenizer(c)
 
 	c.SetSymbolState(NewGenericSymbolState())
 	c.SymbolState().Add("<>", tokenizers.Symbol)

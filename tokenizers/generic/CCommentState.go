@@ -9,12 +9,12 @@ import (
 // CCommentState this state will either delegate to a comment-handling state,
 // or return a token with just a slash in it.
 type CCommentState struct {
-	CppCommentState
+	*CppCommentState
 }
 
 func NewCCommentState() *CCommentState {
 	c := &CCommentState{
-		CppCommentState: *NewCppCommentState(),
+		CppCommentState: NewCppCommentState(),
 	}
 	return c
 }

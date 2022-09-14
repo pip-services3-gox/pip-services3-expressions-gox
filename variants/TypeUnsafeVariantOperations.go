@@ -10,12 +10,12 @@ import (
 
 // TypeUnsafeVariantOperations implements a type unsafe variant operations manager object.
 type TypeUnsafeVariantOperations struct {
-	AbstractVariantOperations
+	*AbstractVariantOperations
 }
 
 func NewTypeUnsafeVariantOperations() *TypeUnsafeVariantOperations {
 	c := &TypeUnsafeVariantOperations{}
-	c.AbstractVariantOperations = *InheritAbstractVariantOperations(c)
+	c.AbstractVariantOperations = InheritAbstractVariantOperations(c)
 	return c
 }
 

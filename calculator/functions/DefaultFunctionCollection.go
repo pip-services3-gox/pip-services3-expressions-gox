@@ -13,13 +13,13 @@ import (
 
 // DefaultFunctionCollection implements a list filled with standard functions.
 type DefaultFunctionCollection struct {
-	FunctionCollection
+	*FunctionCollection
 }
 
 // NewDefaultFunctionCollection constructs this list and fills it with the standard functions.
 func NewDefaultFunctionCollection() *DefaultFunctionCollection {
 	c := &DefaultFunctionCollection{
-		FunctionCollection: *NewFunctionCollection(),
+		FunctionCollection: NewFunctionCollection(),
 	}
 
 	c.Add(NewDelegatedFunction("Ticks", ticksFunctionCalculator))

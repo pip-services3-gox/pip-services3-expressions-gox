@@ -7,12 +7,12 @@ import (
 
 // ExpressionTokenizer implements a tokenizer to perform lexical analysis for expressions.
 type ExpressionTokenizer struct {
-	tokenizers.AbstractTokenizer
+	*tokenizers.AbstractTokenizer
 }
 
 func NewExpressionTokenizer() *ExpressionTokenizer {
 	c := &ExpressionTokenizer{}
-	c.AbstractTokenizer = *tokenizers.InheritAbstractTokenizer(c)
+	c.AbstractTokenizer = tokenizers.InheritAbstractTokenizer(c)
 
 	c.SetDecodeStrings(false)
 

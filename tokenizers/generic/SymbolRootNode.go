@@ -8,13 +8,13 @@ import (
 // SymbolRootNode this class is a special case of a <code>SymbolNode</code>. A <code>SymbolRootNode</code>
 // object has no symbol of its own, but has children that represent all possible symbols.
 type SymbolRootNode struct {
-	SymbolNode
+	*SymbolNode
 }
 
 // NewSymbolRootNode creates and initializes a root node.
 func NewSymbolRootNode() *SymbolRootNode {
 	return &SymbolRootNode{
-		SymbolNode: *NewSymbolNode(nil, 0),
+		SymbolNode: NewSymbolNode(nil, 0),
 	}
 }
 

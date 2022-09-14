@@ -11,12 +11,12 @@ import (
 
 // ExpressionNumberState implements an Expression-specific number state object.
 type ExpressionNumberState struct {
-	generic.GenericNumberState
+	*generic.GenericNumberState
 }
 
 func NewExpressionNumberState() *ExpressionNumberState {
 	c := &ExpressionNumberState{
-		GenericNumberState: *generic.NewGenericNumberState(),
+		GenericNumberState: generic.NewGenericNumberState(),
 	}
 	return c
 }

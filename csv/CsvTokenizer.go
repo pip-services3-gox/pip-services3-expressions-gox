@@ -4,7 +4,7 @@ import "github.com/pip-services3-gox/pip-services3-expressions-gox/tokenizers"
 
 // CsvTokenizer implements a tokenizer class for CSV files.
 type CsvTokenizer struct {
-	tokenizers.AbstractTokenizer
+	*tokenizers.AbstractTokenizer
 	fieldSeparators []rune
 	quoteSymbols    []rune
 	endOfLine       string
@@ -17,7 +17,7 @@ func NewCsvTokenizer() *CsvTokenizer {
 		quoteSymbols:    []rune{'"'},
 		endOfLine:       string(CR) + string(LF),
 	}
-	c.AbstractTokenizer = *tokenizers.InheritAbstractTokenizer(c)
+	c.AbstractTokenizer = tokenizers.InheritAbstractTokenizer(c)
 
 	c.SetNumberState(nil)
 	c.SetWhitespaceState(nil)
