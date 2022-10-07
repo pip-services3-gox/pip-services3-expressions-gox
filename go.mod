@@ -3,7 +3,7 @@ module github.com/pip-services3-gox/pip-services3-expressions-gox
 go 1.18
 
 require (
-	github.com/pip-services3-gox/pip-services3-commons-gox v1.0.5
+	github.com/pip-services3-gox/pip-services3-commons-gox v1.0.7
 	github.com/stretchr/testify v1.8.0
 )
 
